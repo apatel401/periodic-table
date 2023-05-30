@@ -1,0 +1,165 @@
+.periodic-table-container {
+  @import "variables";
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  outline: none;
+
+  .sr-only {
+    position: absolute !important;
+    /* Required to force outside the DOM flow */
+    height: 1px;
+    width: 1px;
+    /* Nearly collapsed */
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE 7+ only support clip without commas */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* All other browsers */
+  }
+
+  .periodic-table-wrapper {
+    display: grid;
+    grid-template-columns: repeat(17, auto) 1fr;
+
+    .element {
+      width: 4vw;
+      height: 5vw;
+      // padding: 2px;
+      border-collapse: collapse;
+      overflow: hidden;
+      cursor: pointer;
+      max-width: 54px;
+      max-height: 68px;
+      min-width: 16px;
+
+      .number {
+        float: left;
+        font-size: 0.5vw;
+        padding-left: 2px;
+        padding-top: 2px;
+        position: absolute;
+      }
+
+      .symbol {
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0.5vw;
+        font-size: 1.5vw;
+      }
+
+      .element-name {
+        font-size: 0.6vw;
+        text-align: center;
+        font-weight: 100;
+      }
+
+      &.active {
+        z-index: 99;
+        transform: translate(2.5px,1.8px) scale(1.25);
+        transition: transform 0.3s ease-in-out;
+        background-color: #202124 !important;
+        color: #dadce0 !important;
+        box-shadow: 1px 1px 15px 0px #171717;
+      }
+
+      &.element-2 {
+        grid-column-start: -2;
+      }
+
+      &.element-58,
+      &.element-90 {
+        grid-column-start: 4;
+        // margin-left: 5px;
+      }
+
+      // &.element-22,
+      // &.element-40,
+      // &.element-72,
+      // &.element-104 {
+      // margin-left: 5px;
+      // }
+
+      &.diatomic, &.polyatomic {
+        background-color: #244d90;
+        color: white;
+      }
+      &.unknown {
+        background-color: #454646;
+        color: white;
+      }
+      &.noble {
+        background-color: #fb66b3;
+        color: white;
+      }
+
+      &.alkali {
+        background-color: #244d57;
+        color: white;
+      }
+
+      &.alkaline {
+        background-color: #3d161f;
+        color: white;
+      }
+
+      &.metalloid {
+        background-color: #757373;
+        color: white;
+      }
+
+      &.halogen {
+        background-color: rgb(11, 121, 11);
+        color: white;
+      }
+
+      &.transition {
+        background-color: rgb(163, 33, 163);
+        color: white;
+      }
+
+      &.lanthanide {
+        background-color: blueviolet;
+        color: white;
+        margin-top: 2rem;
+      }
+
+      &.element-57 {
+        margin-top: 0;
+      }
+
+      &.actinide {
+        background-color: goldenrod;
+        color: white;
+      }
+
+      &.post-transition {
+        background-color: orangered;
+        color: white;
+      }
+
+    }
+
+    .details {
+      grid-column: 5/13;
+      grid-row: 2/4;
+      padding: 0.5vw;
+      padding-top: 0;
+      font-size: 1vw;
+      max-height: 10vw;
+      overflow-y: auto;
+    }
+
+    .big-symbol {
+      grid-column: 3/5;
+      grid-row: 2/4;
+      margin: 0;
+      padding: 0.1vw;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

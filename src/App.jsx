@@ -1,10 +1,13 @@
-function App() {
+import './style.scss';
+import PeriodicTable from './components/PeriodicTable';
 
-  return (
-    <>
-      <h1>Vite + React + THREE.js + React Three Fiber Playground</h1>
-    </>
-  )
+const App = () => {
+    return (
+        <div className="periodic-table-container">
+<PeriodicTable />
+        </div>
+    )
 }
-
 export default App
+
+                       
