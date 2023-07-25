@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+/* eslint-disable react/prop-types */
+import {useState} from 'react'
 import { elements } from './elements'
 
 const Element = ({num,setShowInfo, setCurrentElement}) => {
@@ -15,10 +16,6 @@ const openInfo = () => {
     setShowInfo(true);
     setCurrentElement(element);
     };
-const closeInfo = () => {
-    setShowInfo(false);
-    setCurrentElement({});
-    };
 
 
   return element && (
@@ -30,6 +27,7 @@ const closeInfo = () => {
         className={`element element-${num} ${element.category} ${
           hover ? "active" : ""
         }`}
+        // tabIndex={0}
       >
         <div className="number">{element.number}</div>
         <div className="symbol">{element.symbol}</div>

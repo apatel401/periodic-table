@@ -1,28 +1,76 @@
-import {useElement} from './useElement'
+import { useState } from "react";
+import Element from "./Element";
 
 const PeriodicTable = () => {
-  return (
+  const [showInfo, setShowInfo] = useState(false);
+  const [currentElement, setCurrentElement] = useState({});
+
+
+
+  const showElement = (start, end) => {
+    let items = [];
+    for (let i = start; i <= end; i++) {
+      items.push(
+        <Element
+          setShowInfo={setShowInfo}
+          setCurrentElement={setCurrentElement}
+          num={i}
+          key={i}
+        />
+      );
+    }
+    return items;
+  };
+
+  const closeInfo = () => {
+    setShowInfo(false);
+    setCurrentElement({});
+  };
+
+  return !showInfo ? (
     <div className="periodic-table-wrapper">
       {/* Need to use useElement to split the elements 
       into different parts to achieve real periodic table shape */}
-      {useElement(1,4)}
-      <div className='big-symbol'>
-        {/* symbol Big */}
-        </div>
-      <div className='details'>
-        {/* Will display info here */}
-        </div>
-      {useElement(5, 57)}
-          {useElement(72, 89)}
-          {useElement(104, 118)}
-          {/* Lanthanoids split 72-89 */}
-          {useElement(58, 71)}
-          {useElement(90, 103)}
-          {/* Actinoids split 104-119*/}
-          {/* Lanthenoids 58-71*/}
-          {/* Actionoids 90-103 */}
+      {showElement(1, 4)}
+      <div className="big-symbol">{/* symbol Big */}</div>
+      <div className="details">{/* Will display info here */}</div>
+      {showElement(5, 57)}
+      {/* Lanthanoids split 72-89 */}
+      {showElement(72, 89)}
+      {/* Actinoids split 104-118*/}
+      {showElement(104, 118)}
+      {/* Lanthenoids 58-71*/}
+      {showElement(58, 71)}
+      {/* Actionoids 90-103 */}
+      {showElement(90, 103)}
+    </div>
+  ) : (
+    <div className="element-details">
+      <div className="f-row">
+      <h1>Element Name: {currentElement.name}</h1>
       </div>
-  )
-}
+      <div className="s-row">
+      <div className="col-1">
+      <p>Appearance: {currentElement.appearance}</p>
+      <p>Atomic_mass: {currentElement.atomic_mass}</p>
+      <p>Boil: {currentElement.boil}</p>
+      <p>Density: {currentElement.density}</p>
+      </div>
+      <div className="col-2">
+      <p>Melt: {currentElement.melt}</p>
+      <p>Molar_heat: {currentElement.molar_heat}</p>
+      <p>Number: {currentElement.number}</p>
+      <p>Phase: {currentElement.phase}</p>
+      </div>
+      </div>
+      
+      <div className="col-3">
+      <p>Summary: {currentElement.summary}</p>
+      <p>Atomic bohr Model: </p>
+      </div>
+      <button onClick={closeInfo} className="back-btn"></button>
+    </div>
+  );
+};
 
-export default PeriodicTable
+export default PeriodicTable;
