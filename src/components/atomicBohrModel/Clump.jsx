@@ -7,7 +7,7 @@ import {  useSphere } from "@react-three/cannon"
 
 
 export default function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3(), atoms }) {
-  const [ref, api] = useSphere(() => ({ args: [1], mass: 1, angularDamping: 0.1, linearDamping: 0.65, position: [rfs(atoms/2), rfs(atoms/2), rfs(atoms/2)] }))
+  const [ref, api] = useSphere(() => ({ args: [1], mass: 1, angularDamping: 0.1, linearDamping: 0.65, position: [rfs(8), rfs(8), rfs(8)] }))
   const rfs = THREE.MathUtils.randFloatSpread
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32)
 let baubleMaterial = new THREE.MeshStandardMaterial({ color: "#703AFF", roughness: 10, envMapIntensity: 10 })
