@@ -1,9 +1,8 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { useState, createContext} from "react";
 import Announcer from './Announcer';
 
 export const PeriodicTableContext = createContext()
-export const GlobalFun = createContext()
 
 export default function ProviderComponent(props) {
 
@@ -14,7 +13,7 @@ export default function ProviderComponent(props) {
         ...JSON.parse(JSON.stringify(props.config)),
 
         announcements: "",
-        current: 0,
+        currentElement: null,
         
         
         updateContext: (contextUpdates) => {
@@ -27,7 +26,7 @@ export default function ProviderComponent(props) {
 
     return (
         <PeriodicTableContext.Provider value={contextInfo}>
-                <Announcer message={contextInfo.announcements} />
+                <Announcer message={contextInfo.announcements} currentElement={contextInfo.currentElement}  />
                 {props.children}
         </PeriodicTableContext.Provider>
     )

@@ -1,14 +1,17 @@
 /* eslint-disable react/no-unknown-property */
-import { useState } from "react";
+import { useState, useRef, useContext } from "react";
 import Element from "./Element";
 import BohrModel from "./atomicBohrModel/BohrModel";
 import { Canvas } from "@react-three/fiber";
 
 import { OrbitControls } from "@react-three/drei";
+import { PeriodicTableContext } from "./Provider";
 
 const PeriodicTable = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [currentElement, setCurrentElement] = useState({});
+  const context = useContext(PeriodicTableContext)
+  const details = useRef()
 
   const showElement = (start, end) => {
     let items = [];
@@ -27,7 +30,11 @@ const PeriodicTable = () => {
 
   const closeInfo = () => {
     setShowInfo(false);
-    setCurrentElement({});
+    context.updateContext({
+      currentElement: null,
+      announcements: "back"
+    })
+    // setCurrentElement({});
   };
 
   return !showInfo ? (
@@ -48,7 +55,7 @@ const PeriodicTable = () => {
       {showElement(90, 103)}
     </div>
   ) : (
-    <div className="element-details">
+    <div className="element-details" ref={details}>
       <div className="f-row">
         <h1>Element Name: {currentElement.name}</h1>
       </div>

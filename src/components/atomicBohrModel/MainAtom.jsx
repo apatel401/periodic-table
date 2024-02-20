@@ -1,9 +1,13 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useRef, useState, useEffect } from "react";
 import {  useFrame } from "@react-three/fiber";
 
 import * as THREE from "three";
 import Atom from "./Atom";
-import { usePosition } from "./usePosition";
+import { usePosition } from "../utils/usePosition";
 
 function MainAtom({torusIndex, numOfAtoms}){
   const orbitRef = useRef();

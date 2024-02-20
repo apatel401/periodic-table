@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import { elements } from './elements'
+import { PeriodicTableContext } from './Provider';
 
 const Element = ({num,setShowInfo, setCurrentElement}) => {
-let element = elements[num];
-const [hover, setHover] = useState(false);
+  const context = useContext(PeriodicTableContext)
+  let element = elements[num];
+  const [hover, setHover] = useState(false);
 
 const onMouseEnter = () => {
     setHover(true);
@@ -12,9 +14,15 @@ const onMouseEnter = () => {
 const onMouseLeave = () => {
     setHover(false);
     };
-const openInfo = () => {
+const openInfo = (e) => {
+  e.preventDefault()
     setShowInfo(true);
     setCurrentElement(element);
+    context.updateContext({
+      currentElement: element,
+      current: num,
+      announcements: "displayDetails"
+    })
     };
 
 
