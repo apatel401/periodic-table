@@ -14,6 +14,7 @@ export default function ProviderComponent(props) {
 
         announcements: "",
         currentElement: null,
+        activeElements: null,
         
         
         updateContext: (contextUpdates) => {

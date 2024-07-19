@@ -7,6 +7,7 @@
   outline: none;
   font-family: 'Crimson Pro', serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   .periodic-table-wrapper {
@@ -26,8 +27,15 @@
       @media screen and (min-width: 1200px) {
         max-width: none;
         max-height: none;
+        &.disabled{
+          pointer-events: none;
+          cursor: not-allowed;
+          background-color: rgb(223,209,209) !important;
+        }
+        &.group-active{
+background-color: #02963b !important;
+        }
       }
-
       .number {
         float: left;
         font-size: 0.75vw;
@@ -135,19 +143,9 @@
 
     }
 
-    .details {
-      grid-column: 5/13;
-      grid-row: 2/4;
-      padding: 0.5vw;
-      padding-top: 0;
-      font-size: 1vw;
-      max-height: 10vw;
-      overflow-y: auto;
-    }
-
-    .big-symbol {
-      grid-column: 3/5;
-      grid-row: 2/4;
+    .empty-space {
+      grid-column: 3 / 13;
+      grid-row: 2 / 4;
       margin: 0;
       padding: 0.1vw;
       overflow: hidden;
@@ -155,7 +153,7 @@
   }
   .element-details{
     padding: 20px;
-    max-height: 450px;
+    max-height: 100%;
     overflow: auto;
     .s-row{
       display: flex;

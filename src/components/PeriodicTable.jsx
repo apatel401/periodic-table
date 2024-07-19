@@ -3,15 +3,16 @@ import { useState, useRef, useContext } from "react";
 import Element from "./Element";
 import BohrModel from "./atomicBohrModel/BohrModel";
 import { Canvas } from "@react-three/fiber";
-
 import { OrbitControls } from "@react-three/drei";
 import { PeriodicTableContext } from "./Provider";
+import SelectionBtns from "./SelectionBtns";
 
 const PeriodicTable = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [currentElement, setCurrentElement] = useState({});
   const context = useContext(PeriodicTableContext)
   const details = useRef()
+
 
   const showElement = (start, end) => {
     let items = [];
@@ -38,22 +39,24 @@ const PeriodicTable = () => {
   };
 
   return !showInfo ? (
-    <div className="periodic-table-wrapper">
-      {/* Need to use useElement to split the elements 
+    <>
+<SelectionBtns />
+      <div className="periodic-table-wrapper">
+        {/* Need to use useElement to split the elements 
       into different parts to achieve real periodic table shape */}
-      {showElement(1, 4)}
-      <div className="big-symbol">{/* symbol Big */}</div>
-      <div className="details">{/* Will display info here */}</div>
-      {showElement(5, 57)}
-      {/* Lanthanoids split 72-89 */}
-      {showElement(72, 89)}
-      {/* Actinoids split 104-118*/}
-      {showElement(104, 118)}
-      {/* Lanthenoids 58-71*/}
-      {showElement(58, 71)}
-      {/* Actionoids 90-103 */}
-      {showElement(90, 103)}
-    </div>
+        {showElement(1, 4)}
+        <div className="empty-space">{/* Empty space for periodic table shape */}</div>
+        {showElement(5, 57)}
+        {/* Lanthanoids split 72-89 */}
+        {showElement(72, 89)}
+        {/* Actinoids split 104-118*/}
+        {showElement(104, 118)}
+        {/* Lanthenoids 58-71*/}
+        {showElement(58, 71)}
+        {/* Actionoids 90-103 */}
+        {showElement(90, 103)}
+      </div>
+    </>
   ) : (
     <div className="element-details" ref={details}>
       <div className="f-row">
