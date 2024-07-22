@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 
-const Dropdown = ({ options, mainLabel, value, onChange }) => {
+const Dropdown = forwardRef(({ options, mainLabel, value, onChange }, ref) => {
 
     return (
         <div className='form-selection'>
             <label>{mainLabel}</label>
-            <select  className='form-select' name={options.mainLabel} value={value} onChange={onChange}>
+            <select  className='form-select' name={options.mainLabel} value={value} onChange={onChange} ref={ref}>
                 <option value="">Select {mainLabel}</option>
                 {options.map((option, index) => (
                     <option key={index} value={option.value}>{option.label}</option>
@@ -13,6 +13,6 @@ const Dropdown = ({ options, mainLabel, value, onChange }) => {
             </select>
         </div>
     );
-};
+})
 
 export default Dropdown;

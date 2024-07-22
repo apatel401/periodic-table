@@ -40,7 +40,7 @@ const PeriodicTable = () => {
 
   return !showInfo ? (
     <>
-<SelectionBtns />
+      <SelectionBtns />
       <div className="periodic-table-wrapper">
         {/* Need to use useElement to split the elements 
       into different parts to achieve real periodic table shape */}

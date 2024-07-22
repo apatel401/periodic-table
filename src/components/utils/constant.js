@@ -35,7 +35,7 @@ export const periodOptions = {
 
 export const classificationOptions = {
     mainLabel: "Classification", options:[
-        { value: '1-2', label: 'All' },
+        { value: 'element', label: 'All' },
         { value: 'metal,actinide,lanthanide', label: 'Metals' },
         { value: 'nonmetal,noble', label: 'Non-metals' },
         { value: 'metalloid,element-84,element-85,element-118', label: 'Metalloids' },
