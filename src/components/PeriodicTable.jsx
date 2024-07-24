@@ -45,7 +45,9 @@ const PeriodicTable = () => {
         {/* Need to use useElement to split the elements 
       into different parts to achieve real periodic table shape */}
         {showElement(1, 4)}
-        <div className="empty-space">{/* Empty space for periodic table shape */}</div>
+        <div className="description">
+          <p>{context.activeDescription}</p>
+        </div>
         {showElement(5, 57)}
         {/* Lanthanoids split 72-89 */}
         {showElement(72, 89)}

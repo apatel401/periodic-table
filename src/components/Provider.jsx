@@ -15,6 +15,7 @@ export default function ProviderComponent(props) {
         announcements: "",
         currentElement: null,
         activeElements: null,
+        activeDescription: "To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.",
         
         
         updateContext: (contextUpdates) => {
