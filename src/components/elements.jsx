@@ -25,7 +25,8 @@ export const elements = [
       symbol: 'H',
       xpos: 1,
       ypos: 1,
-      shells: [1]
+      shells: [1],
+      strongLines: [410.1, 434, 486.1, 656.2]
     },
     {
       name: 'Helium',

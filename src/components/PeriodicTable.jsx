@@ -6,13 +6,15 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { PeriodicTableContext } from "./Provider";
 import SelectionBtns from "./SelectionBtns";
+import useDrawSpectrum from "./useDrawSpectram";
 
 const PeriodicTable = () => {
   const [showInfo, setShowInfo] = useState(false);
-  const [currentElement, setCurrentElement] = useState({});
+  const [currentElement, setCurrentElement] = useState();
   const context = useContext(PeriodicTableContext)
   const details = useRef()
-
+  const canvasId = 'spectrum';
+  useDrawSpectrum(currentElement, canvasId);
 
   const showElement = (start, end) => {
     let items = [];
@@ -78,7 +80,9 @@ const PeriodicTable = () => {
           <p>Phase: {currentElement.phase}</p>
         </div>
       </div>
+      <div id="spectra">
 
+      </div>
       <div className="col-3">
         <p>Summary: {currentElement.summary}</p>
         <p>Atomic bohr Model: </p>
