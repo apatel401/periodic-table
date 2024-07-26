@@ -17,7 +17,7 @@ const SelectionBtns = () => {
         let clearSelection = false;
         //setting clear selection to remove disabled class
         if (val === "") {
-            clearSelection = true
+            clearSelection = true;
         };
         //clearing selection of other dropdown when one is clicked
 
@@ -56,22 +56,22 @@ const SelectionBtns = () => {
             case "Period":
                 elem = handlePeriod(val);
                 selectedObj = periodOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : ''
+                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
                 break;
             case "Group":
                 elem = handleGroup(val);
                 selectedObj = groupOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : ''
+                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
                 break;
             case "Classification":
                 elem = handleClassification(val);
                 selectedObj = classificationOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : ''
+                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
                 break;
             default:
                 elem = [];
         }
-        // console.log(elem)
+
         context.updateContext({
             activeElements: elem,
             activeDescription: desc,

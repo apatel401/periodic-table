@@ -18,6 +18,7 @@ export default function ProviderComponent(props) {
         activeElements: null,
         activeDescription: "To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.",
         clearSelection: false,
+        selectedDropdown: {},
         
         
         updateContext: (contextUpdates) => {
