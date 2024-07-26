@@ -8,6 +8,7 @@ const SelectionBtns = () => {
     const periodRef = useRef(null);
     const groupRef = useRef(null);
     const classificationRef = useRef(null);
+    let initialDesc = 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
 
     const handleChange = (e, label) => {
         const val = e.target.value;
@@ -56,17 +57,17 @@ const SelectionBtns = () => {
             case "Period":
                 elem = handlePeriod(val);
                 selectedObj = periodOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
+                desc = selectedObj ? selectedObj.description : initialDesc
                 break;
             case "Group":
                 elem = handleGroup(val);
                 selectedObj = groupOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
+                desc = selectedObj ? selectedObj.description : initialDesc
                 break;
             case "Classification":
                 elem = handleClassification(val);
                 selectedObj = classificationOptions.options.find(option => option.value === val);
-                desc = selectedObj ? selectedObj.description : 'To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.'
+                desc = selectedObj ? selectedObj.description : initialDesc
                 break;
             default:
                 elem = [];
@@ -84,7 +85,8 @@ const SelectionBtns = () => {
 
         context.updateContext({ 
             clearSelection: true,
-            activeElements: null
+            activeElements: null,
+            activeDescription: initialDesc,
          });
         //Making sure all values for dropdown is cleared
         periodRef.current.value = "";
