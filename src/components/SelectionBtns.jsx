@@ -14,20 +14,22 @@ const SelectionBtns = () => {
         let elem;
         let desc;
         let selectedObj;
-        const resetOtherDropdowns = (excludeLabel) => {
-            if (excludeLabel !== "Period" && periodRef.current) {
-                periodRef.current.value = "";
-
-            }
-            if (excludeLabel !== "Group" && groupRef.current) {
-                groupRef.current.value = "";
-
-            }
-            if (excludeLabel !== "Classification" && classificationRef.current) {
-                classificationRef.current.value = "";
-
-            }
+        let clearSelection = false;
+        //setting clear selection to remove disabled class
+        if (val === "") {
+            clearSelection = true
         };
+        //clearing selection of other dropdown when one is clicked
+
+        if (label !== "Period" && periodRef.current) {
+            periodRef.current.value = "";
+        }
+        if (label !== "Group" && groupRef.current) {
+            groupRef.current.value = "";
+        }
+        if (label !== "Classification" && classificationRef.current) {
+            classificationRef.current.value = "";
+        }
 
         const handlePeriod = (value) => generateNumberArray(value);
 
@@ -50,8 +52,6 @@ const SelectionBtns = () => {
             return elements;
         };
 
-        resetOtherDropdowns(label)
-
         switch (label) {
             case "Period":
                 elem = handlePeriod(val);
@@ -71,19 +71,33 @@ const SelectionBtns = () => {
             default:
                 elem = [];
         }
-        console.log(desc)
+        // console.log(elem)
         context.updateContext({
             activeElements: elem,
-            activeDescription: desc
+            activeDescription: desc,
+            announcements: "dropdown",
+            clearSelection: clearSelection
         });
     };
 
+    const handleClear = () => {
+
+        context.updateContext({ 
+            clearSelection: true,
+            activeElements: null
+         });
+        //Making sure all values for dropdown is cleared
+        periodRef.current.value = "";
+        groupRef.current.value = "";
+        classificationRef.current.value = "";
+    }
 
     return (
         <div className='selection-wrapper'>
             <Dropdown mainLabel={groupOptions.mainLabel} options={groupOptions.options} onChange={(e) => handleChange(e, groupOptions.mainLabel)} ref={groupRef} />
             <Dropdown mainLabel={periodOptions.mainLabel} options={periodOptions.options} onChange={(e) => handleChange(e, periodOptions.mainLabel)} ref={periodRef} />
             <Dropdown mainLabel={classificationOptions.mainLabel} options={classificationOptions.options} onChange={(e) => handleChange(e, classificationOptions.mainLabel)} ref={classificationRef} />
+            <button onClick={handleClear} aria-label="Clear selection">Clear Selection</button>
         </div>
     )
 }

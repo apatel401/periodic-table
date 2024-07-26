@@ -13,8 +13,7 @@ const PeriodicTable = () => {
   const [currentElement, setCurrentElement] = useState();
   const context = useContext(PeriodicTableContext)
   const details = useRef()
-  const canvasId = 'spectrum';
-  useDrawSpectrum(currentElement, canvasId);
+  useDrawSpectrum(currentElement);
 
   const showElement = (start, end) => {
     let items = [];
@@ -34,10 +33,9 @@ const PeriodicTable = () => {
   const closeInfo = () => {
     setShowInfo(false);
     context.updateContext({
-      currentElement: null,
+      current: null,
       announcements: "back"
     })
-    // setCurrentElement({});
   };
 
   return !showInfo ? (

@@ -16,6 +16,7 @@ export default function ProviderComponent(props) {
         currentElement: null,
         activeElements: null,
         activeDescription: "To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.",
+        clearSelection: false,
         
         
         updateContext: (contextUpdates) => {
@@ -28,7 +29,7 @@ export default function ProviderComponent(props) {
 
     return (
         <PeriodicTableContext.Provider value={contextInfo}>
-                <Announcer message={contextInfo.announcements} currentElement={contextInfo.currentElement}  />
+                <Announcer message={contextInfo.announcements} currentElement={contextInfo.currentElement} desc={contextInfo.activeDescription} />
                 {props.children}
         </PeriodicTableContext.Provider>
     )

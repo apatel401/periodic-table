@@ -9,6 +9,7 @@ const Announcer = React.memo((props) => {
 
     let messageContent = props.message;
     let currentElement = props.currentElement;
+    let desc = props.desc;
 
     const message = () => {
         switch (messageContent) {
@@ -16,8 +17,7 @@ const Announcer = React.memo((props) => {
                 return currentElement && `Element Name: ${currentElement.name}, 
                 Number: ${currentElement.number},`
             case 'dropdown':
-                return currentElement && `Element Name: ${currentElement.name}, 
-                    Number: ${currentElement.number},`
+                return desc
             case 'back':
                 return `back to periodic table showing all elements`;
 

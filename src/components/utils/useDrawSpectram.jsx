@@ -2,17 +2,16 @@ import { useEffect, useRef } from 'react';
 import { wavelengthToColor } from './wavelengthToColor';
 import { lines } from '../test';
 
-const useDrawSpectrum = (currentElement, canvasId) => {
+const useDrawSpectrum = (currentElement) => {
     useEffect(() => {
         if (currentElement){
           /*  Passing only number of current element to use another json which has strongLines data to produce spectral images*/
             const {name, strongLines} = lines[currentElement.number];
             const main = document.getElementById("spectra");
             const canvas = document.createElement("canvas");
-            console.log(main)
             canvas.width = main.offsetWidth;
             canvas.height = (main.offsetHeight * 95) / 100;
-            canvas.id = canvasId;
+            canvas.id = "spectrum-" + currentElement.number;
     
             const ctx = canvas.getContext("2d");
             const titleDiv = document.createElement("div");
@@ -69,7 +68,7 @@ const useDrawSpectrum = (currentElement, canvasId) => {
             }
         }
         
-    }, [currentElement, canvasId]);
+    }, [currentElement]);
 };
 
 export default useDrawSpectrum;

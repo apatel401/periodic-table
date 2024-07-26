@@ -38,7 +38,7 @@ const Element = ({ num, setShowInfo, setCurrentElement }) => {
     'element',
     element.category,
     hover ? 'active' : '',
-    !isActive && context.activeElements !== null ? 'disabled' : '',
+    !isActive && context.activeElements !== null && !context.clearSelection ? 'disabled' : '',
     isActive ? "group-active" : ''
   ].filter(Boolean).join(' ');
 
