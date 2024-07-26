@@ -19,6 +19,7 @@ export default function ProviderComponent(props) {
         activeDescription: "To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.",
         clearSelection: false,
         selectedDropdown: {},
+        showInfo: false,
         
         
         updateContext: (contextUpdates) => {

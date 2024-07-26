@@ -3,7 +3,7 @@ import { useState, useContext, useEffect, forwardRef} from 'react'
 import { elements } from './elements'
 import { PeriodicTableContext } from './Provider';
 
-const Element = forwardRef(({ num, setShowInfo, setCurrentElement }, ref) => {
+const Element = forwardRef(({num}, ref) => {
 
   const context = useContext(PeriodicTableContext)
   let element = elements[num];
@@ -23,12 +23,11 @@ const Element = forwardRef(({ num, setShowInfo, setCurrentElement }, ref) => {
   };
   const openInfo = (e) => {
     e.preventDefault()
-    setShowInfo(true);
-    setCurrentElement(element);
     context.updateContext({
       currentElement: element,
       current: num,
-      announcements: "displayDetails"
+      announcements: "displayDetails",
+      showInfo: true
     })
   };
 
