@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { useState, useRef, useContext } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import Element from "./Element";
 import BohrModel from "./atomicBohrModel/BohrModel";
 import { Canvas } from "@react-three/fiber";
@@ -12,8 +12,15 @@ const PeriodicTable = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [currentElement, setCurrentElement] = useState();
   const context = useContext(PeriodicTableContext)
-  const details = useRef()
+  const details = useRef();
+  const elemRefs = useRef([]);
   useDrawSpectrum(currentElement);
+
+  useEffect(() => {
+    if (context.announcements === "back") {
+      elemRefs.current[context.current].focus();
+    }
+  }, [showInfo]);
 
   const showElement = (start, end) => {
     let items = [];
@@ -24,6 +31,7 @@ const PeriodicTable = () => {
           setCurrentElement={setCurrentElement}
           num={i}
           key={i}
+          ref={(el) => (elemRefs.current[i] = el)}
         />
       );
     }
@@ -33,7 +41,6 @@ const PeriodicTable = () => {
   const closeInfo = () => {
     setShowInfo(false);
     context.updateContext({
-      current: null,
       announcements: "back"
     })
   };

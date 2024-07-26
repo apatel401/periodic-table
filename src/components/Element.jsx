@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect, forwardRef} from 'react'
 import { elements } from './elements'
 import { PeriodicTableContext } from './Provider';
 
-const Element = ({ num, setShowInfo, setCurrentElement }) => {
+const Element = forwardRef(({ num, setShowInfo, setCurrentElement }, ref) => {
+
   const context = useContext(PeriodicTableContext)
   let element = elements[num];
   const [hover, setHover] = useState(false);
@@ -47,6 +48,12 @@ const Element = ({ num, setShowInfo, setCurrentElement }) => {
       title={element.name}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onKeyPress={(e) => {
+        if (e.key === "Enter") {
+          openInfo(e);
+        }
+      }}
+      ref={ref}
       onClick={openInfo}
       className={classes}
       aria-label={element.name + "-" + element.number}
@@ -57,6 +64,6 @@ const Element = ({ num, setShowInfo, setCurrentElement }) => {
       {/* <div className="element-name">{element.name}</div> */}
     </div>
   )
-}
+})
 
  export default Element

@@ -14,6 +14,7 @@ export default function ProviderComponent(props) {
 
         announcements: "",
         currentElement: null,
+        current: null,
         activeElements: null,
         activeDescription: "To navigate in the periodic table press the buttons to explore each section and press the elements to see detailed information.",
         clearSelection: false,
