@@ -1,0 +1,1182 @@
+{
+    "elements": [
+        {
+            "name": "Hydrogen",
+            "atomicNumber": 1,
+            "averageAtomicMass": "1.008",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -259,
+            "boilingPoint": -253
+        },
+        {
+            "name": "Helium",
+            "atomicNumber": 2,
+            "averageAtomicMass": "4.003",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -272,
+            "boilingPoint": -269
+        },
+        {
+            "name": "Lithium",
+            "atomicNumber": 3,
+            "averageAtomicMass": "6.94",
+            "electronegativity": "0.98",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 181,
+            "boilingPoint": 1342
+        },
+        {
+            "name": "Beryllium",
+            "atomicNumber": 4,
+            "averageAtomicMass": "9.012",
+            "electronegativity": "1.57",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1287,
+            "boilingPoint": 2469
+        },
+        {
+            "name": "Boron",
+            "atomicNumber": 5,
+            "averageAtomicMass": "10.81",
+            "electronegativity": "2.04",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2076,
+            "boilingPoint": 4000
+        },
+        {
+            "name": "Carbon",
+            "atomicNumber": 6,
+            "averageAtomicMass": "12.011",
+            "electronegativity": "2.55",
+            "commonOxidationStates": "-4, -3, -2, -1, 0, +1, +2, +3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 3550,
+            "boilingPoint": 4827
+        },
+        {
+            "name": "Nitrogen",
+            "atomicNumber": 7,
+            "averageAtomicMass": "14.007",
+            "electronegativity": "3.04",
+            "commonOxidationStates": "-3, +2, +3, +4, +5",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -210,
+            "boilingPoint": -196
+        },
+        {
+            "name": "Oxygen",
+            "atomicNumber": 8,
+            "averageAtomicMass": "15.999",
+            "electronegativity": "3.44",
+            "commonOxidationStates": "-2, -1",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -219,
+            "boilingPoint": -183
+        },
+        {
+            "name": "Fluorine",
+            "atomicNumber": 9,
+            "averageAtomicMass": "18.998",
+            "electronegativity": "3.98",
+            "commonOxidationStates": "-1",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -220,
+            "boilingPoint": -188
+        },
+        {
+            "name": "Neon",
+            "atomicNumber": 10,
+            "averageAtomicMass": "20.180",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -249,
+            "boilingPoint": -246
+        },
+        {
+            "name": "Sodium",
+            "atomicNumber": 11,
+            "averageAtomicMass": "22.990",
+            "electronegativity": "0.93",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 98,
+            "boilingPoint": 883
+        },
+        {
+            "name": "Magnesium",
+            "atomicNumber": 12,
+            "electronegativity": "24.305",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 650,
+            "boilingPoint": 1091
+        },
+        {
+            "name": "Aluminum",
+            "atomicNumber": 13,
+            "electronegativity": "26.982",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 660,
+            "boilingPoint": 2470
+        },
+        {
+            "name": "Silicon",
+            "atomicNumber": 14,
+            "electronegativity": "28.085",
+            "commonOxidationStates": "-4, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1410,
+            "boilingPoint": 3355
+        },
+        {
+            "name": "Phosphorus",
+            "atomicNumber": 15,
+            "electronegativity": "30.974",
+            "commonOxidationStates": "-3, +3, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 44,
+            "boilingPoint": 281
+        },
+        {
+            "name": "Sulfur",
+            "atomicNumber": 16,
+            "electronegativity": "32.065",
+            "commonOxidationStates": "-2, +2, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 114,
+            "boilingPoint": 445
+        },
+        {
+            "name": "Chlorine",
+            "atomicNumber": 17,
+            "electronegativity": "35.453",
+            "commonOxidationStates": "-1, +1, +3, +5, +7",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -102,
+            "boilingPoint": -34
+        },
+        {
+            "name": "Argon",
+            "atomicNumber": 18,
+            "averageAtomicMass": "39.098",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -189,
+            "boilingPoint": -186
+        },
+        {
+            "name": "Potassium",
+            "atomicNumber": 19,
+            "electronegativity": "0.82",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 64,
+            "boilingPoint": 759
+        },
+        {
+            "name": "Calcium",
+            "atomicNumber": 20,
+            "averageAtomicMass": "40.078",
+            "electronegativity": "1.00",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 842,
+            "boilingPoint": 1484
+        },
+        {
+            "name": "Scandium",
+            "atomicNumber": 21,
+            "averageAtomicMass": "44.956",
+            "electronegativity": "1.36",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1541,
+            "boilingPoint": 2830
+        },
+        {
+            "name": "Titanium",
+            "atomicNumber": 22,
+            "averageAtomicMass": "47.867",
+            "electronegativity": "1.54",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1668,
+            "boilingPoint": 3287
+        },
+        {
+            "name": "Vanadium",
+            "atomicNumber": 23,
+            "averageAtomicMass": "50.942",
+            "electronegativity": "1.63",
+            "commonOxidationStates": "0, +2, +3, +4, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1910,
+            "boilingPoint": 3407
+        },
+        {
+            "name": "Chromium",
+            "atomicNumber": 24,
+            "averageAtomicMass": "51.996",
+            "electronegativity": "1.66",
+            "commonOxidationStates": "0, +2, +3, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2672,
+            "boilingPoint": 1907
+        },
+        {
+            "name": "Manganese",
+            "atomicNumber": 25,
+            "averageAtomicMass": "54.938",
+            "electronegativity": "1.55",
+            "commonOxidationStates": "-1, 0, +2, +3, +4, +6, +7",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1246,
+            "boilingPoint": 2061
+        },
+        {
+            "name": "Iron",
+            "atomicNumber": 26,
+            "averageAtomicMass": "55.845",
+            "electronegativity": "1.83",
+            "commonOxidationStates": "-2, 0, +2, +3, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1538,
+            "boilingPoint": 2861
+        },
+        {
+            "name": "Cobalt",
+            "atomicNumber": 27,
+            "averageAtomicMass": "58.933",
+            "electronegativity": "1.88",
+            "commonOxidationStates": "-1, 0, +2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1495,
+            "boilingPoint": 2927
+        },
+        {
+            "name": "Nickel",
+            "atomicNumber": 28,
+            "averageAtomicMass": "58.693",
+            "electronegativity": "1.91",
+            "commonOxidationStates": "0, +2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1455,
+            "boilingPoint": 2730
+        },
+        {
+            "name": "Copper",
+            "atomicNumber": 29,
+            "averageAtomicMass": "63.546",
+            "electronegativity": "1.90",
+            "commonOxidationStates": "+1, +2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1085,
+            "boilingPoint": 2562
+        },
+        {
+            "name": "Zinc",
+            "atomicNumber": 30,
+            "averageAtomicMass": "65.38",
+            "electronegativity": "1.65",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 419,
+            "boilingPoint": 907
+        },
+        {
+            "name": "Gallium",
+            "atomicNumber": 31,
+            "averageAtomicMass": "69.723",
+            "electronegativity": "1.81",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 30,
+            "boilingPoint": 2400
+        },
+        {
+            "name": "Germanium",
+            "atomicNumber": 32,
+            "averageAtomicMass": "72.64",
+            "electronegativity": "2.01",
+            "commonOxidationStates": "-+4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 938,
+            "boilingPoint": 2833
+        },
+        {
+            "name": "Arsenic",
+            "atomicNumber": 33,
+            "averageAtomicMass": "74.922",
+            "electronegativity": "2.18",
+            "commonOxidationStates": "-3, +3, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 817,
+            "boilingPoint": 613
+        },
+        {
+            "name": "Selenium",
+            "atomicNumber": 34,
+            "averageAtomicMass": "78.96",
+            "electronegativity": "2.55",
+            "commonOxidationStates": "-2, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 221,
+            "boilingPoint": 685
+        },
+        {
+            "name": "Bromine",
+            "atomicNumber": 35,
+            "averageAtomicMass": "79.904",
+            "electronegativity": "2.96",
+            "commonOxidationStates": "-1, +1, +3, +5, +7",
+            "phaseAtStandardTemperatureAndPressure": "liquid",
+            "meltingPoint": -7,
+            "boilingPoint": 59
+        },
+        {
+            "name": "Krypton",
+            "atomicNumber": 36,
+            "averageAtomicMass": "83.798",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -157,
+            "boilingPoint": -153
+        },
+        {
+            "name": "Rubidium",
+            "atomicNumber": 37,
+            "averageAtomicMass": "85.468",
+            "electronegativity": "0.82",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 39,
+            "boilingPoint": 688
+        },
+        {
+            "name": "Strontium",
+            "atomicNumber": 38,
+            "averageAtomicMass": "87.62",
+            "electronegativity": "0.95",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 777,
+            "boilingPoint": 1382
+        },
+        {
+            "name": "Yttrium",
+            "atomicNumber": 39,
+            "averageAtomicMass": "88.906",
+            "electronegativity": "1.22",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1526,
+            "boilingPoint": 3338
+        },
+        {
+            "name": "Zirconium",
+            "atomicNumber": 40,
+            "averageAtomicMass": "91.224",
+            "electronegativity": "1.33",
+            "commonOxidationStates": "+4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1855,
+            "boilingPoint": 4409
+        },
+        {
+            "name": "Niobium",
+            "atomicNumber": 41,
+            "averageAtomicMass": "92.906",
+            "electronegativity": "1.60",
+            "commonOxidationStates": "+3, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2477,
+            "boilingPoint": 4927
+        },
+        {
+            "name": "Molybdenum",
+            "atomicNumber": 42,
+            "averageAtomicMass": "95.95",
+            "electronegativity": "2.16",
+            "commonOxidationStates": "0, +2, +3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2623,
+            "boilingPoint": 4639
+        },
+        {
+            "name": "Technetium",
+            "atomicNumber": 43,
+            "averageAtomicMass": "[98] no stable isotopes",
+            "electronegativity": "2.10",
+            "commonOxidationStates": "+7",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2204,
+            "boilingPoint": 4265
+        },
+        {
+            "name": "Ruthenium",
+            "atomicNumber": 44,
+            "averageAtomicMass": "101.07",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "-2, 0, +2, +3, +4, +6, +8",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2334,
+            "boilingPoint": 4150
+        },
+        {
+            "name": "Rhodium",
+            "atomicNumber": 45,
+            "averageAtomicMass": "102.906",
+            "electronegativity": "2.28",
+            "commonOxidationStates": "0, +1, +2, +3, +4, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1963,
+            "boilingPoint": 3697
+        },
+        {
+            "name": "Palladium",
+            "atomicNumber": 46,
+            "averageAtomicMass": "106.42",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "0, +2, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1555,
+            "boilingPoint": 2963
+        },
+        {
+            "name": "Silver",
+            "atomicNumber": 47,
+            "averageAtomicMass": "107.868",
+            "electronegativity": "1.93",
+            "commonOxidationStates": "+1, +2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 962,
+            "boilingPoint": 2162
+        },
+        {
+            "name": "Cadmium",
+            "atomicNumber": 48,
+            "averageAtomicMass": "112.414",
+            "electronegativity": "1.69",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 321,
+            "boilingPoint": 767
+        },
+        {
+            "name": "Indium",
+            "atomicNumber": 49,
+            "averageAtomicMass": "114.818",
+            "electronegativity": "1.78",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 157,
+            "boilingPoint": 2072
+        },
+        {
+            "name": "Tin",
+            "atomicNumber": 50,
+            "averageAtomicMass": "118.710",
+            "electronegativity": "1.96",
+            "commonOxidationStates": "+2, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 232,
+            "boilingPoint": 2602
+        },
+        {
+            "name": "Antimony",
+            "atomicNumber": 51,
+            "averageAtomicMass": "121.760",
+            "electronegativity": "2.05",
+            "commonOxidationStates": "-3, +3, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 631,
+            "boilingPoint": 1587
+        },
+        {
+            "name": "Tellurium",
+            "atomicNumber": 52,
+            "averageAtomicMass": "127.60",
+            "electronegativity": "2.10",
+            "commonOxidationStates": "-2, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 450,
+            "boilingPoint": 988
+        },
+        {
+            "name": "Iodine",
+            "atomicNumber": 53,
+            "averageAtomicMass": "126.904",
+            "electronegativity": "2.66",
+            "commonOxidationStates": "-1, +1, +3, +5, +7",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 114,
+            "boilingPoint": 184
+        },
+        {
+            "name": "Xenon",
+            "atomicNumber": 54,
+            "averageAtomicMass": "131.293",
+            "electronegativity": "2.60",
+            "commonOxidationStates": "+2, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -112,
+            "boilingPoint": -108
+        },
+        {
+            "name": "Cesium",
+            "atomicNumber": 55,
+            "averageAtomicMass": "132.905",
+            "electronegativity": "0.79",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 28,
+            "boilingPoint": 671
+        },
+        {
+            "name": "Barium",
+            "atomicNumber": 56,
+            "averageAtomicMass": "137.327",
+            "electronegativity": "0.89",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 727,
+            "boilingPoint": 1897
+        },
+        {
+            "name": "Lanthanides",
+            "areaAlt": "Lanthanides",
+            "areaDetails": "Lanthanides. This can be instructions for lanthanides (57-71)",
+            "shape": "poly",
+            "coords": "195,442,248,442,261,548,253,436,253,383,195,383"
+        },
+        {
+            "name": "Lanthanum",
+            "atomicNumber": 57,
+            "averageAtomicMass": "138.905",
+            "electronegativity": "1.10",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 920,
+            "boilingPoint": 3464
+        },
+        {
+            "name": "Cerium",
+            "atomicNumber": 58,
+            "averageAtomicMass": "140.116",
+            "electronegativity": "1.12",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 795,
+            "boilingPoint": 3257
+        },
+        {
+            "name": "Praseodymium",
+            "atomicNumber": 59,
+            "averageAtomicMass": "140.908",
+            "electronegativity": "1.13",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 931,
+            "boilingPoint": 3520
+        },
+        {
+            "name": "Neodymium",
+            "atomicNumber": 60,
+            "averageAtomicMass": "144.242",
+            "electronegativity": "1.14",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1021,
+            "boilingPoint": 3074
+        },
+        {
+            "name": "Promethium",
+            "atomicNumber": 61,
+            "averageAtomicMass": "[145] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1042,
+            "boilingPoint": 3000
+        },
+        {
+            "name": "Samarium",
+            "atomicNumber": 62,
+            "averageAtomicMass": "150.36",
+            "electronegativity": "1.17",
+            "commonOxidationStates": "+2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1072,
+            "boilingPoint": 1794
+        },
+        {
+            "name": "Europium",
+            "atomicNumber": 63,
+            "averageAtomicMass": "151.964",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 826,
+            "boilingPoint": 1529
+        },
+        {
+            "name": "Gadolinium",
+            "atomicNumber": 64,
+            "averageAtomicMass": "157.25",
+            "electronegativity": "1.20",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1312,
+            "boilingPoint": 3273
+        },
+        {
+            "name": "Terbium",
+            "atomicNumber": 65,
+            "averageAtomicMass": "158.925",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1356,
+            "boilingPoint": 3230
+        },
+        {
+            "name": "Dysprosium",
+            "atomicNumber": 66,
+            "averageAtomicMass": "162.500",
+            "electronegativity": "1.22",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1412,
+            "boilingPoint": 2567
+        },
+        {
+            "name": "Holmium",
+            "atomicNumber": 67,
+            "averageAtomicMass": "164.930",
+            "electronegativity": "1.23",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1474,
+            "boilingPoint": 2695
+        },
+        {
+            "name": "Erbium",
+            "atomicNumber": 68,
+            "averageAtomicMass": "167.259",
+            "electronegativity": "1.24",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1529,
+            "boilingPoint": 2868
+        },
+        {
+            "name": "Thulium",
+            "atomicNumber": 69,
+            "averageAtomicMass": "168.934",
+            "electronegativity": "1.25",
+            "commonOxidationStates": "+2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1545,
+            "boilingPoint": 1950
+        },
+        {
+            "name": "Ytterbium",
+            "atomicNumber": 70,
+            "averageAtomicMass": "173.045",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 819,
+            "boilingPoint": 1196
+        },
+        {
+            "name": "Lutetium",
+            "atomicNumber": 71,
+            "averageAtomicMass": "174.967",
+            "electronegativity": "1.00",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1663,
+            "boilingPoint": 3402
+        },
+        {
+            "name": "Hafnium",
+            "atomicNumber": 72,
+            "averageAtomicMass": "178.49",
+            "electronegativity": "1.30",
+            "commonOxidationStates": "+4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2227,
+            "boilingPoint": 4602
+        },
+        {
+            "name": "Tantalum",
+            "atomicNumber": 73,
+            "averageAtomicMass": "180.948",
+            "electronegativity": "1.50",
+            "commonOxidationStates": "+5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 3020,
+            "boilingPoint": 5457
+        },
+        {
+            "name": "Tungsten",
+            "atomicNumber": 74,
+            "averageAtomicMass": "183.84",
+            "electronegativity": "1.70",
+            "commonOxidationStates": "0, +2, +3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 3422,
+            "boilingPoint": 5555
+        },
+        {
+            "name": "Rhenium",
+            "atomicNumber": 75,
+            "averageAtomicMass": "186.207",
+            "electronegativity": "1.90",
+            "commonOxidationStates": "-1, +2, +4, +6, +7",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 3185,
+            "boilingPoint": 5597
+        },
+        {
+            "name": "Osmium",
+            "atomicNumber": 76,
+            "averageAtomicMass": "190.23",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "-2, 0, +2, +3, +4, +6, +8",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 3033,
+            "boilingPoint": 5027
+        },
+        {
+            "name": "Iridium",
+            "atomicNumber": 77,
+            "averageAtomicMass": "192.217",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "-1, 0, +1, +2, +3, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2466,
+            "boilingPoint": 4428
+        },
+        {
+            "name": "Platinum",
+            "atomicNumber": 78,
+            "averageAtomicMass": "195.084",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "+2, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1768,
+            "boilingPoint": 3825
+        },
+        {
+            "name": "Gold",
+            "atomicNumber": 79,
+            "averageAtomicMass": "196.967",
+            "electronegativity": "2.40",
+            "commonOxidationStates": "-1, +1, +2, +3, +4, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1064,
+            "boilingPoint": 2700
+        },
+        {
+            "name": "Mercury",
+            "atomicNumber": 80,
+            "averageAtomicMass": "200.592",
+            "electronegativity": "1.90",
+            "commonOxidationStates": "+1, +2",
+            "phaseAtStandardTemperatureAndPressure": "liquid",
+            "meltingPoint": -39,
+            "boilingPoint": 357
+        },
+        {
+            "name": "Thallium",
+            "atomicNumber": 81,
+            "averageAtomicMass": "204.38",
+            "electronegativity": "1.80",
+            "commonOxidationStates": "+1, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 34,
+            "boilingPoint": 1473
+        },
+        {
+            "name": "Lead",
+            "atomicNumber": 82,
+            "averageAtomicMass": "207.2",
+            "electronegativity": "1.80",
+            "commonOxidationStates": "+2, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 328,
+            "boilingPoint": 1749
+        },
+        {
+            "name": "Bismuth",
+            "atomicNumber": 83,
+            "averageAtomicMass": "208.980",
+            "electronegativity": "1.90",
+            "commonOxidationStates": "+3, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 272,
+            "boilingPoint": 1564
+        },
+        {
+            "name": "Polonium",
+            "atomicNumber": 84,
+            "averageAtomicMass": "[209] no stable isotopes",
+            "electronegativity": "2.00",
+            "commonOxidationStates": "+2, +4, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 254,
+            "boilingPoint": 962
+        },
+        {
+            "name": "Astatine",
+            "atomicNumber": 85,
+            "averageAtomicMass": "[210] no stable isotopes",
+            "electronegativity": "2.20",
+            "commonOxidationStates": "-1, +1, +3, +5, +7",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 302,
+            "boilingPoint": 337
+        },
+        {
+            "name": "Radon",
+            "atomicNumber": 86,
+            "averageAtomicMass": "[222] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "gas",
+            "meltingPoint": -71,
+            "boilingPoint": -62
+        },
+        {
+            "name": "Francium",
+            "atomicNumber": 87,
+            "averageAtomicMass": "[223] no stable isotopes",
+            "electronegativity": "0.70",
+            "commonOxidationStates": "+1",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 27,
+            "boilingPoint": 677
+        },
+        {
+            "name": "Radium",
+            "atomicNumber": 88,
+            "averageAtomicMass": "[226] no stable isotopes",
+            "electronegativity": "0.90",
+            "commonOxidationStates": "+2",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 700,
+            "boilingPoint": 1737
+        },
+        {
+            "name": "Actinium",
+            "atomicNumber": 89,
+            "averageAtomicMass": "[227] no stable isotopes",
+            "electronegativity": "1.10",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1050,
+            "boilingPoint": 3197
+        },
+        {
+            "name": "Thorium",
+            "atomicNumber": 90,
+            "averageAtomicMass": "232.038",
+            "electronegativity": "1.30",
+            "commonOxidationStates": "+4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1755,
+            "boilingPoint": 4787
+        },
+        {
+            "name": "Protactinium",
+            "atomicNumber": 91,
+            "averageAtomicMass": "231.036",
+            "electronegativity": "1.50",
+            "commonOxidationStates": "+4, +5",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1568,
+            "boilingPoint": 4000
+        },
+        {
+            "name": "Uranium",
+            "atomicNumber": 92,
+            "averageAtomicMass": "238.029",
+            "electronegativity": "1.70",
+            "commonOxidationStates": "+3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1132,
+            "boilingPoint": 4131
+        },
+        {
+            "name": "Neptunium",
+            "atomicNumber": 93,
+            "averageAtomicMass": "[237] no stable isotopes",
+            "electronegativity": "1.30",
+            "commonOxidationStates": "+3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 644,
+            "boilingPoint": 3902
+        },
+        {
+            "name": "Plutonium",
+            "atomicNumber": 94,
+            "averageAtomicMass": "[244] no stable isotopes",
+            "electronegativity": "1.30",
+            "commonOxidationStates": "+3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 639,
+            "boilingPoint": 3232
+        },
+        {
+            "name": "Americium",
+            "atomicNumber": 95,
+            "averageAtomicMass": "[243] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3, +4, +5, +6",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1176,
+            "boilingPoint": 2607
+        },
+        {
+            "name": "Curium",
+            "atomicNumber": 96,
+            "averageAtomicMass": "[247] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1347,
+            "boilingPoint": 3110
+        },
+        {
+            "name": "Berkelium",
+            "atomicNumber": 97,
+            "averageAtomicMass": "[247] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 985,
+            "boilingPoint": 2627
+        },
+        {
+            "name": "Californium",
+            "atomicNumber": 98,
+            "averageAtomicMass": "[251] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3, +4",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 899,
+            "boilingPoint": 1472
+        },
+        {
+            "name": "Einsteinium",
+            "atomicNumber": 99,
+            "averageAtomicMass": "[252] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 860,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Fermium",
+            "atomicNumber": 100,
+            "averageAtomicMass": "[257] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1527,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Mendelevium",
+            "atomicNumber": 101,
+            "averageAtomicMass": "[258] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 827,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Nobelium",
+            "atomicNumber": 102,
+            "averageAtomicMass": "[259] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+2, +3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 827,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Lawrencium",
+            "atomicNumber": 103,
+            "averageAtomicMass": "[262] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "+3",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 1627,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Rutherfordium",
+            "atomicNumber": 104,
+            "averageAtomicMass": "[267] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": 2100,
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Dubnium",
+            "atomicNumber": 105,
+            "averageAtomicMass": "[268] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Seaborgium",
+            "atomicNumber": 106,
+            "averageAtomicMass": "[269] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Bohrium",
+            "atomicNumber": 107,
+            "averageAtomicMass": "[270] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Hassium",
+            "atomicNumber": 108,
+            "averageAtomicMass": "[269] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Meitnerium",
+            "atomicNumber": 109,
+            "averageAtomicMass": "[278] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Darmstadtium",
+            "atomicNumber": 110,
+            "averageAtomicMass": "[281] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Roentgenium",
+            "atomicNumber": 111,
+            "averageAtomicMass": "[280] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Copernicium",
+            "atomicNumber": 112,
+            "averageAtomicMass": "[285] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Nihonium",
+            "atomicNumber": 113,
+            "averageAtomicMass": "[286] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Flerovium",
+            "atomicNumber": 114,
+            "averageAtomicMass": "[289] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Moscovium",
+            "atomicNumber": 115,
+            "averageAtomicMass": "[289] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Livermorium",
+            "atomicNumber": 116,
+            "averageAtomicMass": "[293] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        },
+        {
+            "name": "Tennessine",
+            "atomicNumber": 117,
+            "averageAtomicMass": "[294] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": 610
+        },
+        {
+            "name": "Oganesson",
+            "atomicNumber": 118,
+            "averageAtomicMass": "[294] no stable isotopes",
+            "electronegativity": "unknown",
+            "commonOxidationStates": "unknown",
+            "phaseAtStandardTemperatureAndPressure": "solid",
+            "meltingPoint": "unknown",
+            "boilingPoint": "unknown"
+        }
+    ]
+}

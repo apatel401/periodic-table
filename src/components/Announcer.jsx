@@ -11,18 +11,13 @@ const Announcer = React.memo((props) => {
     let currentElement = props.currentElement;
 
     const message = () => {
-        switch(messageContent) {
+        switch (messageContent) {
             case 'displayDetails':
-                return currentElement && `Element Name: ${currentElement.name}, Appearance: ${currentElement.appearance},
-                Atomic_mass: ${currentElement.atomic_mass},
-                Boil: ${currentElement.boil},
-                Density: ${currentElement.density},
-                Melt: ${currentElement.melt},
-                Molar_heat: ${currentElement.molar_heat},
-                Number: ${currentElement.number},
-                Phase: ${currentElement.phase},
-                Summary: ${currentElement.summary}`;
-
+                return currentElement && `Element Name: ${currentElement.name}, 
+                Number: ${currentElement.number},`
+            case 'dropdown':
+                return currentElement && `Element Name: ${currentElement.name}, 
+                    Number: ${currentElement.number},`
             case 'back':
                 return `back to periodic table showing all elements`;
 
@@ -34,7 +29,7 @@ const Announcer = React.memo((props) => {
     // aria-live region for announcements
     return (
         <div role="alert" aria-live="polite" aria-atomic="true" className="sr-only">
-            { message() }
+            {message()}
         </div>
     );
 })
