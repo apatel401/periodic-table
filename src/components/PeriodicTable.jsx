@@ -6,7 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { PeriodicTableContext } from "./Provider";
 import SelectionBtns from "./SelectionBtns";
-import useDrawSpectrum from "./useDrawSpectram";
+import useDrawSpectrum from "./utils/useDrawSpectram";
 
 const PeriodicTable = () => {
   const [showInfo, setShowInfo] = useState(false);

@@ -49,11 +49,12 @@ const Element = ({ num, setShowInfo, setCurrentElement }) => {
       onMouseLeave={onMouseLeave}
       onClick={openInfo}
       className={classes}
+      aria-label={element.name + "-" + element.number}
       tabIndex={isActive || context.activeElements === null ? "0" : "-1"}
     >
       <div className="number">{element.number}</div>
       <div className="symbol">{element.symbol}</div>
-      <div className="element-name">{element.name}</div>
+      {/* <div className="element-name">{element.name}</div> */}
     </div>
   )
 }
