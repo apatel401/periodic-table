@@ -3,14 +3,19 @@ import { useState, createContext} from "react";
 import Announcer from './Announcer';
 
 export const PeriodicTableContext = createContext()
+export const PeriodicTableConfig = createContext()
 
 export default function ProviderComponent(props) {
 
     // const QUERY = '(prefers-reduced-motion: reduce)';
     // const mediaQueryList = window.matchMedia(QUERY);
+    const configInformation = {
+        ...JSON.parse(JSON.stringify(props.config)),
+
+    }
 
     const contextInformation = {
-        ...JSON.parse(JSON.stringify(props.config)),
+
 
         announcements: "",
         currentElement: null,
@@ -28,12 +33,15 @@ export default function ProviderComponent(props) {
     }
 
     const [contextInfo, setContextInfo] = useState(contextInformation);
+    const [configInfo, setConfigInfo] = useState(configInformation);
 
 
     return (
+        <PeriodicTableConfig.Provider value={configInfo}>
         <PeriodicTableContext.Provider value={contextInfo}>
                 <Announcer message={contextInfo.announcements} currentElement={contextInfo.currentElement} desc={contextInfo.activeDescription} />
                 {props.children}
         </PeriodicTableContext.Provider>
+        </PeriodicTableConfig.Provider>
     )
 }

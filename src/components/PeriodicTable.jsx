@@ -29,29 +29,25 @@ const PeriodicTable = () => {
   };
 
 
-  return !context.showInfo ? (
-    <>
-      <div className="periodic-table-wrapper">
-        {/* Need to use useElement to split the elements 
-      into different parts to achieve real periodic table shape */}
-        {showElement(1, 4)}
-        <div className="description">
-          <p>{context.activeDescription}</p>
-        </div>
-        {showElement(5, 57)}
-        {/* Lanthanoids split 72-89 */}
-        {showElement(72, 89)}
-        {/* Actinoids split 104-118*/}
-        {showElement(104, 118)}
-        {/* Lanthenoids 58-71*/}
-        {showElement(58, 71)}
-        {/* Actionoids 90-103 */}
-        {showElement(90, 103)}
+  return context.showInfo ? <ElementDetails /> : (
+    <div className="periodic-table-wrapper">
+      {/* Need to use useElement to split the elements 
+    into different parts to achieve real periodic table shape */}
+      {showElement(1, 4)}
+      <div className="description">
+        <p>{context.activeDescription}</p>
       </div>
-    </>
-  ) : (
-    <ElementDetails />
-  );
+      {showElement(5, 57)}
+      {/* Lanthanoids split 72-89 */}
+      {showElement(72, 89)}
+      {/* Actinoids split 104-118*/}
+      {showElement(104, 118)}
+      {/* Lanthenoids 58-71*/}
+      {showElement(58, 71)}
+      {/* Actionoids 90-103 */}
+      {showElement(90, 103)}
+    </div>
+)
 };
 
 export default PeriodicTable;

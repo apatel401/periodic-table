@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState, useContext, useEffect, forwardRef} from 'react'
-import { elements } from './elements'
-import { PeriodicTableContext } from './Provider';
+import { PeriodicTableConfig, PeriodicTableContext } from './Provider';
 
 const Element = forwardRef(({num}, ref) => {
 
   const context = useContext(PeriodicTableContext)
-  let element = elements[num];
+  const config = useContext(PeriodicTableConfig)
+  let element = config[num];
   const [hover, setHover] = useState(false);
 
   useEffect(() => {

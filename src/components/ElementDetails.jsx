@@ -19,20 +19,19 @@ const ElementDetails = () => {
     return (
         <div className="element-details" ref={details}>
             <div className="f-row">
-                <h1>Element Name: {currentElement.name}</h1>
+                <h1>Name: {currentElement.name}</h1>
             </div>
             <div className="s-row">
                 <div className="col-1">
-                    <p>Appearance: {currentElement.appearance}</p>
-                    <p>Atomic_mass: {currentElement.atomic_mass}</p>
-                    <p>Boil: {currentElement.boil}</p>
-                    <p>Density: {currentElement.density}</p>
+                    <p>Average Atomic Mass (amu): {currentElement.averageAtomicMass}</p>
+                    <p>Atomic Number: {currentElement.atomicNumber}</p>
+                    <p>boilingPoint: {currentElement.boilingPoint}</p>
+                    <p>Common Oxidation States: {currentElement.commonOxidationStates}</p>
                 </div>
                 <div className="col-2">
-                    <p>Melt: {currentElement.melt}</p>
-                    <p>Molar_heat: {currentElement.molar_heat}</p>
-                    <p>Number: {currentElement.number}</p>
-                    <p>Phase: {currentElement.phase}</p>
+                    <p>melting point: {currentElement.meltingPoint}</p>
+                    <p>electronegativity: {currentElement.electronegativity}</p>
+                    <p>Phase at Standard Temperature and Pressure: {currentElement.phaseAtStandardTemperatureAndPressure}</p>
                 </div>
             </div>
             <div id="spectra">

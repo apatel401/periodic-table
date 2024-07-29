@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { wavelengthToColor } from './wavelengthToColor';
-import { lines } from '../test';
 
 const useDrawSpectrum = (currentElement) => {
     useEffect(() => {
         if (currentElement){
           /*  Passing only number of current element to use another json which has strongLines data to produce spectral images*/
-            const {name, strongLines} = lines[currentElement.number];
+            const {name, strongLines} = currentElement
             const main = document.getElementById("spectra");
             const canvas = document.createElement("canvas");
             canvas.width = main.offsetWidth;
