@@ -42,14 +42,22 @@ const SelectionBtns = () => {
                 if (el.classList.contains(value)) {
                     elements.push(el.classList[0].split("-")[1]);
                 }
-                if (value.includes(",")) {
+                if (value.includes(","))  {
                     value.split(",").forEach((v) => {
                         if (el.classList.contains(v)) {
                             elements.push(el.classList[0].split("-")[1]);
                         }
                     });
+
                 }
+
             });
+            if(elements.length > 115){
+                console.log(elements.length)
+                document.querySelectorAll(".element").forEach((el) =>  {
+                    return el.classList.add("all")
+                })
+            }
             return elements;
         };
 
@@ -95,7 +103,7 @@ const SelectionBtns = () => {
     }
 
     return (
-        <div className='selection-wrapper'>
+        <div className='selection-wrapper' style={{display: context.showInfo && "none"}}>
             <Dropdown mainLabel={groupOptions.mainLabel} options={groupOptions.options} onChange={(e) => handleChange(e, groupOptions.mainLabel)} ref={groupRef} />
             <Dropdown mainLabel={periodOptions.mainLabel} options={periodOptions.options} onChange={(e) => handleChange(e, periodOptions.mainLabel)} ref={periodRef} />
             <Dropdown mainLabel={classificationOptions.mainLabel} options={classificationOptions.options} onChange={(e) => handleChange(e, classificationOptions.mainLabel)} ref={classificationRef} />

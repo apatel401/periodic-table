@@ -1,5 +1,9 @@
 [
   {
+    "name": "None",
+    "summary": "Place of zero so that the array starts with 1 with hydrogen"
+  },
+  {
     "name": "Hydrogen",
     "atomicNumber": 1,
     "averageAtomicMass": "1.008",
@@ -14,6 +18,11 @@
       434,
       486.1,
       656.2
+    ],
+    "category": "diatomic nonmetal",
+    "number": 1,
+    "shells": [
+      1
     ]
   },
   {
@@ -45,10 +54,10 @@
       667.8,
       686.7
     ],
-    "category": "diatomic nonmetal",
-    "number": 1,
+    "category": "noble gas",
+    "number": 2,
     "shells": [
-      1
+      2
     ]
   },
   {
@@ -78,10 +87,11 @@
       610.3,
       670.7
     ],
-    "category": "noble gas",
-    "number": 2,
+    "category": "alkali metal",
+    "number": 3,
     "shells": [
-      2
+      2,
+      1
     ]
   },
   {
@@ -104,11 +114,11 @@
       655.8,
       698.2
     ],
-    "category": "alkali metal",
-    "number": 3,
+    "category": "alkaline earth metal",
+    "number": 4,
     "shells": [
       2,
-      1
+      2
     ]
   },
   {
@@ -128,11 +138,11 @@
       494,
       608
     ],
-    "category": "alkaline earth metal",
-    "number": 4,
+    "category": "metalloid",
+    "number": 5,
     "shells": [
       2,
-      2
+      3
     ]
   },
   {
@@ -155,11 +165,11 @@
       657.8,
       658.2
     ],
-    "category": "metalloid",
-    "number": 5,
+    "category": "polyatomic nonmetal",
+    "number": 6,
     "shells": [
       2,
-      3
+      4
     ]
   },
   {
@@ -200,11 +210,11 @@
       648.2,
       661
     ],
-    "category": "polyatomic nonmetal",
-    "number": 6,
+    "category": "diatomic nonmetal",
+    "number": 7,
     "shells": [
       2,
-      4
+      5
     ]
   },
   {
@@ -240,10 +250,10 @@
       645.5
     ],
     "category": "diatomic nonmetal",
-    "number": 7,
+    "number": 8,
     "shells": [
       2,
-      5
+      6
     ]
   },
   {
@@ -276,11 +286,11 @@
       690.9,
       696.6
     ],
-    "category": "diatomic nonmetal",
-    "number": 8,
+    "category": "diatomic nonmetal halogens",
+    "number": 9,
     "shells": [
       2,
-      6
+      7
     ]
   },
   {
@@ -367,11 +377,11 @@
       671.7,
       692.9
     ],
-    "category": "diatomic nonmetal halogens",
-    "number": 9,
+    "category": "noble gas",
+    "number": 10,
     "shells": [
       2,
-      7
+      8
     ]
   },
   {
@@ -413,11 +423,12 @@
       654.4,
       654.5
     ],
-    "category": "noble gas",
-    "number": 10,
+    "category": "alkali metal",
+    "number": 11,
     "shells": [
       2,
-      8
+      8,
+      1
     ]
   },
   {
@@ -442,12 +453,12 @@
       634.6,
       654.5
     ],
-    "category": "alkali metal",
-    "number": 11,
+    "category": "alkaline earth metal",
+    "number": 12,
     "shells": [
       2,
       8,
-      1
+      2
     ]
   },
   {
@@ -471,12 +482,12 @@
       633.5,
       669.6
     ],
-    "category": "alkaline earth metal",
-    "number": 12,
+    "category": "post-transition metal",
+    "number": 13,
     "shells": [
       2,
       8,
-      2
+      3
     ]
   },
   {
@@ -521,12 +532,12 @@
       634.7,
       637.1
     ],
-    "category": "post-transition metal",
-    "number": 13,
+    "category": "metalloid",
+    "number": 14,
     "shells": [
       2,
       8,
-      3
+      4
     ]
   },
   {
@@ -557,12 +568,12 @@
       650.3,
       650.7
     ],
-    "category": "metalloid",
-    "number": 14,
+    "category": "polyatomic nonmetal",
+    "number": 15,
     "shells": [
       2,
       8,
-      4
+      5
     ]
   },
   {
@@ -589,11 +600,11 @@
       675.7
     ],
     "category": "polyatomic nonmetal",
-    "number": 15,
+    "number": 16,
     "shells": [
       2,
       8,
-      5
+      6
     ]
   },
   {
@@ -626,12 +637,12 @@
       544.4,
       545.7
     ],
-    "category": "polyatomic nonmetal",
-    "number": 16,
+    "category": "diatomic nonmetal halogens",
+    "number": 17,
     "shells": [
       2,
       8,
-      6
+      7
     ]
   },
   {
@@ -760,12 +771,12 @@
       693.7,
       696.5
     ],
-    "category": "diatomic nonmetal halogens",
-    "number": 17,
+    "category": "noble gas",
+    "number": 18,
     "shells": [
       2,
       8,
-      7
+      8
     ]
   },
   {
@@ -831,12 +842,13 @@
       693.8,
       696.4
     ],
-    "category": "noble gas",
-    "number": 18,
+    "category": "alkali metal",
+    "number": 19,
     "shells": [
       2,
       8,
-      8
+      8,
+      1
     ]
   },
   {
@@ -885,13 +897,13 @@
       657.2,
       671.7
     ],
-    "category": "alkali metal",
-    "number": 19,
+    "category": "alkaline earth metal",
+    "number": 20,
     "shells": [
       2,
       8,
       8,
-      1
+      2
     ]
   },
   {
@@ -965,12 +977,12 @@
       625.8,
       630.5
     ],
-    "category": "alkaline earth metal",
-    "number": 20,
+    "category": "transition metal",
+    "number": 21,
     "shells": [
       2,
       8,
-      8,
+      9,
       2
     ]
   },
@@ -1098,11 +1110,11 @@
       626.1
     ],
     "category": "transition metal",
-    "number": 21,
+    "number": 22,
     "shells": [
       2,
       8,
-      9,
+      10,
       2
     ]
   },
@@ -1207,11 +1219,11 @@
       625.1
     ],
     "category": "transition metal",
-    "number": 22,
+    "number": 23,
     "shells": [
       2,
       8,
-      10,
+      11,
       2
     ]
   },
@@ -1283,12 +1295,12 @@
       579.1
     ],
     "category": "transition metal",
-    "number": 23,
+    "number": 24,
     "shells": [
       2,
       8,
-      11,
-      2
+      13,
+      1
     ]
   },
   {
@@ -1337,12 +1349,12 @@
       602.1
     ],
     "category": "transition metal",
-    "number": 24,
+    "number": 25,
     "shells": [
       2,
       8,
       13,
-      1
+      2
     ]
   },
   {
@@ -1391,11 +1403,11 @@
       645.6
     ],
     "category": "transition metal",
-    "number": 25,
+    "number": 26,
     "shells": [
       2,
       8,
-      13,
+      14,
       2
     ]
   },
@@ -1414,11 +1426,11 @@
       412.1
     ],
     "category": "transition metal",
-    "number": 26,
+    "number": 27,
     "shells": [
       2,
       8,
-      14,
+      15,
       2
     ]
   },
@@ -1436,11 +1448,11 @@
       499.2
     ],
     "category": "transition metal",
-    "number": 27,
+    "number": 28,
     "shells": [
       2,
       8,
-      15,
+      16,
       2
     ]
   },
@@ -1483,12 +1495,12 @@
       664.1
     ],
     "category": "transition metal",
-    "number": 28,
+    "number": 29,
     "shells": [
       2,
       8,
-      16,
-      2
+      18,
+      1
     ]
   },
   {
@@ -1512,12 +1524,12 @@
       636.2
     ],
     "category": "transition metal",
-    "number": 29,
+    "number": 30,
     "shells": [
       2,
       8,
       18,
-      1
+      2
     ]
   },
   {
@@ -1542,13 +1554,13 @@
       641.9,
       645.5
     ],
-    "category": "transition metal",
-    "number": 30,
+    "category": "post-transition metal",
+    "number": 31,
     "shells": [
       2,
       8,
       18,
-      2
+      3
     ]
   },
   {
@@ -1567,13 +1579,13 @@
       589.3,
       602.1
     ],
-    "category": "post-transition metal",
-    "number": 31,
+    "category": "metalloid",
+    "number": 32,
     "shells": [
       2,
       8,
       18,
-      3
+      4
     ]
   },
   {
@@ -1595,12 +1607,12 @@
       454.3617
     ],
     "category": "metalloid",
-    "number": 32,
+    "number": 33,
     "shells": [
       2,
       8,
       18,
-      4
+      5
     ]
   },
   {
@@ -1625,13 +1637,13 @@
       605.5,
       644.4
     ],
-    "category": "metalloid",
-    "number": 33,
+    "category": "polyatomic nonmetal",
+    "number": 34,
     "shells": [
       2,
       8,
       18,
-      5
+      6
     ]
   },
   {
@@ -1670,13 +1682,13 @@
       668.2,
       669.2
     ],
-    "category": "polyatomic nonmetal",
-    "number": 34,
+    "category": "diatomic nonmetal halogens",
+    "number": 35,
     "shells": [
       2,
       8,
       18,
-      6
+      7
     ]
   },
   {
@@ -1764,13 +1776,13 @@
       669.9,
       690.4
     ],
-    "category": "diatomic nonmetal halogens",
-    "number": 35,
+    "category": "noble gas",
+    "number": 36,
     "shells": [
       2,
       8,
       18,
-      7
+      8
     ]
   },
   {
@@ -1822,13 +1834,14 @@
       656,
       677.5
     ],
-    "category": "noble gas",
-    "number": 36,
+    "category": "alkali metal",
+    "number": 37,
     "shells": [
       2,
       8,
       18,
-      8
+      8,
+      1
     ]
   },
   {
@@ -1876,14 +1889,14 @@
       687.8,
       689.2
     ],
-    "category": "alkali metal",
-    "number": 37,
+    "category": "alkaline earth metal",
+    "number": 38,
     "shells": [
       2,
       8,
       18,
       8,
-      1
+      2
     ]
   },
   {
@@ -1960,13 +1973,13 @@
       668.4,
       679.3
     ],
-    "category": "alkaline earth metal",
-    "number": 38,
+    "category": "transition metal",
+    "number": 39,
     "shells": [
       2,
       8,
       18,
-      8,
+      9,
       2
     ]
   },
@@ -2048,12 +2061,12 @@
       614.3
     ],
     "category": "transition metal",
-    "number": 39,
+    "number": 40,
     "shells": [
       2,
       8,
       18,
-      9,
+      10,
       2
     ]
   },
@@ -2131,13 +2144,13 @@
       666
     ],
     "category": "transition metal",
-    "number": 40,
+    "number": 41,
     "shells": [
       2,
       8,
       18,
-      10,
-      2
+      12,
+      1
     ]
   },
   {
@@ -2198,12 +2211,12 @@
       603
     ],
     "category": "transition metal",
-    "number": 41,
+    "number": 42,
     "shells": [
       2,
       8,
       18,
-      12,
+      13,
       1
     ]
   },
@@ -2299,13 +2312,13 @@
       646.1
     ],
     "category": "transition metal",
-    "number": 42,
+    "number": 43,
     "shells": [
       2,
       8,
       18,
       13,
-      1
+      2
     ]
   },
   {
@@ -2374,13 +2387,13 @@
       563.6
     ],
     "category": "transition metal",
-    "number": 43,
+    "number": 44,
     "shells": [
       2,
       8,
       18,
-      13,
-      2
+      15,
+      1
     ]
   },
   {
@@ -2409,12 +2422,12 @@
       598.3
     ],
     "category": "transition metal",
-    "number": 44,
+    "number": 45,
     "shells": [
       2,
       8,
       18,
-      15,
+      16,
       1
     ]
   },
@@ -2432,13 +2445,12 @@
       421.2
     ],
     "category": "transition metal",
-    "number": 45,
+    "number": 46,
     "shells": [
       2,
       8,
       18,
-      16,
-      1
+      18
     ]
   },
   {
@@ -2466,12 +2478,13 @@
       566.7
     ],
     "category": "transition metal",
-    "number": 46,
+    "number": 47,
     "shells": [
       2,
       8,
       18,
-      18
+      18,
+      1
     ]
   },
   {
@@ -2501,13 +2514,13 @@
       672.5
     ],
     "category": "transition metal",
-    "number": 47,
+    "number": 48,
     "shells": [
       2,
       8,
       18,
       18,
-      1
+      2
     ]
   },
   {
@@ -2555,14 +2568,14 @@
       654.1,
       689.1
     ],
-    "category": "transition metal",
-    "number": 48,
+    "category": "post-transition metal",
+    "number": 49,
     "shells": [
       2,
       8,
       18,
       18,
-      2
+      3
     ]
   },
   {
@@ -2590,13 +2603,13 @@
       584.4
     ],
     "category": "post-transition metal",
-    "number": 49,
+    "number": 50,
     "shells": [
       2,
       8,
       18,
       18,
-      3
+      4
     ]
   },
   {
@@ -2617,14 +2630,14 @@
       607.9,
       613
     ],
-    "category": "post-transition metal",
-    "number": 50,
+    "category": "metalloid",
+    "number": 51,
     "shells": [
       2,
       8,
       18,
       18,
-      4
+      5
     ]
   },
   {
@@ -2664,13 +2677,13 @@
       597.4
     ],
     "category": "metalloid",
-    "number": 51,
+    "number": 52,
     "shells": [
       2,
       8,
       18,
       18,
-      5
+      6
     ]
   },
   {
@@ -2700,14 +2713,14 @@
       661.9,
       681.2
     ],
-    "category": "metalloid",
-    "number": 52,
+    "category": "diatomic nonmetal halogens",
+    "number": 53,
     "shells": [
       2,
       8,
       18,
       18,
-      6
+      7
     ]
   },
   {
@@ -2860,14 +2873,14 @@
       697.6,
       699
     ],
-    "category": "diatomic nonmetal halogens",
-    "number": 53,
+    "category": "noble gas",
+    "number": 54,
     "shells": [
       2,
       8,
       18,
       18,
-      7
+      8
     ]
   },
   {
@@ -2942,14 +2955,15 @@
       697.9,
       698.3
     ],
-    "category": "noble gas",
-    "number": 54,
+    "category": "alkali metal",
+    "number": 55,
     "shells": [
       2,
       8,
       18,
       18,
-      8
+      8,
+      1
     ]
   },
   {
@@ -2985,75 +2999,6 @@
       669.3,
       686.5
     ],
-    "category": "alkali metal",
-    "number": 55,
-    "shells": [
-      2,
-      8,
-      18,
-      18,
-      8,
-      1
-    ]
-  },
-  {
-    "name": "Lanthanides",
-    "areaAlt": "Lanthanides",
-    "areaDetails": "Lanthanides. This can be instructions for lanthanides (57-71)",
-    "shape": "poly",
-    "coords": "195,442,248,442,261,548,253,436,253,383,195,383",
-    "symbol": "La",
-    "strongLines": [
-      401.5,
-      403.1,
-      404.2,
-      406,
-      407.7,
-      408.6,
-      408.9,
-      412.3,
-      415.1,
-      418.7,
-      419.6,
-      423.8,
-      428,
-      433.3,
-      442.3,
-      442.9,
-      452.2,
-      456.7,
-      457,
-      489.9,
-      492,
-      492.1,
-      494.9,
-      499.9,
-      505,
-      505.6,
-      510.6,
-      514.5,
-      515.8,
-      517.7,
-      518.3,
-      521.1,
-      523.4,
-      525.3,
-      527.1,
-      545.5,
-      550.1,
-      564.8,
-      574,
-      576.9,
-      578.9,
-      579.1,
-      593,
-      624.9,
-      639.4,
-      641,
-      645.5,
-      654.3,
-      657.8
-    ],
     "category": "alkaline earth metal",
     "number": 56,
     "shells": [
@@ -3074,7 +3019,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 920,
     "boilingPoint": 3464,
-    "symbol": "Ce",
+    "symbol": "La",
     "strongLines": [
       400.3,
       400.5,
@@ -3235,7 +3180,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 795,
     "boilingPoint": 3257,
-    "symbol": "Pr",
+    "symbol": "Ce",
     "strongLines": [
       400,
       400.4,
@@ -3398,7 +3343,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 931,
     "boilingPoint": 3520,
-    "symbol": "Nd",
+    "symbol": "Pr",
     "strongLines": [
       400.4,
       401.2,
@@ -3497,7 +3442,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1021,
     "boilingPoint": 3074,
-    "symbol": "Pm",
+    "symbol": "Nd",
     "strongLines": [
       400.9,
       405.1,
@@ -3638,7 +3583,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1042,
     "boilingPoint": 3000,
-    "symbol": "Sm",
+    "symbol": "Pm",
     "strongLines": [
       402.3,
       403.5,
@@ -3746,7 +3691,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1072,
     "boilingPoint": 1794,
-    "symbol": "Eu",
+    "symbol": "Sm",
     "strongLines": [
       403.9,
       412.9,
@@ -3848,7 +3793,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 826,
     "boilingPoint": 1529,
-    "symbol": "Gd",
+    "symbol": "Eu",
     "strongLines": [
       400.8,
       401.7,
@@ -3965,7 +3910,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1312,
     "boilingPoint": 3273,
-    "symbol": "Tb",
+    "symbol": "Gd",
     "strongLines": [
       400.5,
       403.2,
@@ -4014,7 +3959,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1356,
     "boilingPoint": 3230,
-    "symbol": "Dy",
+    "symbol": "Tb",
     "strongLines": [
       400,
       400.5,
@@ -4081,7 +4026,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1412,
     "boilingPoint": 2567,
-    "symbol": "Ho",
+    "symbol": "Dy",
     "strongLines": [
       400.3,
       402.7,
@@ -4150,7 +4095,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1474,
     "boilingPoint": 2695,
-    "symbol": "Er",
+    "symbol": "Ho",
     "strongLines": [
       400.7,
       401.2,
@@ -4210,7 +4155,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1529,
     "boilingPoint": 2868,
-    "symbol": "Tm",
+    "symbol": "Er",
     "strongLines": [
       402.4,
       404.4,
@@ -4266,7 +4211,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1545,
     "boilingPoint": 1950,
-    "symbol": "Yb",
+    "symbol": "Tm",
     "strongLines": [
       405.2,
       408.9,
@@ -4324,7 +4269,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 819,
     "boilingPoint": 1196,
-    "symbol": "Lu",
+    "symbol": "Yb",
     "strongLines": [
       405.4,
       412.4,
@@ -4363,7 +4308,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1663,
     "boilingPoint": 3402,
-    "symbol": "Hf",
+    "symbol": "Lu",
     "strongLines": [
       406.2,
       409.3,
@@ -4398,7 +4343,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 2227,
     "boilingPoint": 4602,
-    "symbol": "Ta",
+    "symbol": "Hf",
     "strongLines": [
       406.1,
       406.7,
@@ -4436,7 +4381,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 3020,
     "boilingPoint": 5457,
-    "symbol": "W",
+    "symbol": "Ta",
     "strongLines": [
       400.8,
       401.5,
@@ -4477,7 +4422,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 3422,
     "boilingPoint": 5555,
-    "symbol": "Re",
+    "symbol": "W",
     "strongLines": [
       413.6,
       414.4,
@@ -4511,7 +4456,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 3185,
     "boilingPoint": 5597,
-    "symbol": "Os",
+    "symbol": "Re",
     "strongLines": [
       406.6,
       411.2,
@@ -4551,7 +4496,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 3033,
     "boilingPoint": 5027,
-    "symbol": "Ir",
+    "symbol": "Os",
     "strongLines": [
       426.8,
       431.1
@@ -4576,7 +4521,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 2466,
     "boilingPoint": 4428,
-    "symbol": "Pt",
+    "symbol": "Ir",
     "strongLines": [
       401.3,
       406.5,
@@ -4632,7 +4577,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1768,
     "boilingPoint": 3825,
-    "symbol": "Au",
+    "symbol": "Pt",
     "strongLines": [
       404,
       406.5,
@@ -4667,7 +4612,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1064,
     "boilingPoint": 2700,
-    "symbol": "Hg",
+    "symbol": "Au",
     "strongLines": [
       404.6,
       433.9,
@@ -4705,7 +4650,7 @@
     "phaseAtStandardTemperatureAndPressure": "liquid",
     "meltingPoint": -39,
     "boilingPoint": 357,
-    "symbol": "Tl",
+    "symbol": "Hg",
     "strongLines": [
       427.4,
       430.6,
@@ -4737,7 +4682,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 34,
     "boilingPoint": 1473,
-    "symbol": "Pb",
+    "symbol": "Tl",
     "strongLines": [
       401.9,
       405.7,
@@ -4786,7 +4731,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 328,
     "boilingPoint": 1749,
-    "symbol": "Bi",
+    "symbol": "Pb",
     "strongLines": [
       407.9,
       425.9,
@@ -4822,7 +4767,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 272,
     "boilingPoint": 1564,
-    "symbol": "Po",
+    "symbol": "Bi",
     "strongLines": [
       417,
       449.3
@@ -4847,7 +4792,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 254,
     "boilingPoint": 962,
-    "symbol": "At",
+    "symbol": "Po",
     "strongLines": [],
     "category": "post-transition metals",
     "number": 84,
@@ -4869,7 +4814,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 302,
     "boilingPoint": 337,
-    "symbol": "Rn",
+    "symbol": "At",
     "strongLines": [
       430.7,
       434.9,
@@ -4901,7 +4846,7 @@
     "phaseAtStandardTemperatureAndPressure": "gas",
     "meltingPoint": -71,
     "boilingPoint": -62,
-    "symbol": "Fr",
+    "symbol": "Rn",
     "strongLines": [
       422.5,
       432.5
@@ -4926,7 +4871,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 27,
     "boilingPoint": 677,
-    "symbol": "Ra",
+    "symbol": "Fr",
     "strongLines": [
       434,
       443.6,
@@ -4964,7 +4909,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 700,
     "boilingPoint": 1737,
-    "symbol": "Ac",
+    "symbol": "Ra",
     "strongLines": [
       403.4,
       406.1,
@@ -5019,7 +4964,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1050,
     "boilingPoint": 3197,
-    "symbol": "Th",
+    "symbol": "Ac",
     "strongLines": [
       400.8,
       400.9,
@@ -5131,7 +5076,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1755,
     "boilingPoint": 4787,
-    "symbol": "Pa",
+    "symbol": "Th",
     "strongLines": [
       401.2,
       401.8,
@@ -5183,7 +5128,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1568,
     "boilingPoint": 4000,
-    "symbol": "U",
+    "symbol": "Pa",
     "strongLines": [
       400.5,
       401.7,
@@ -5230,7 +5175,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1132,
     "boilingPoint": 4131,
-    "symbol": "Np",
+    "symbol": "U",
     "strongLines": [
       504.4,
       538,
@@ -5259,7 +5204,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 644,
     "boilingPoint": 3902,
-    "symbol": "Pu",
+    "symbol": "Np",
     "strongLines": [
       413.3,
       414,
@@ -5301,7 +5246,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 639,
     "boilingPoint": 3232,
-    "symbol": "Am",
+    "symbol": "Pu",
     "strongLines": [
       402,
       403.5,
@@ -5358,7 +5303,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1176,
     "boilingPoint": 2607,
-    "symbol": "Cm",
+    "symbol": "Am",
     "strongLines": [
       401.6,
       403.1,
@@ -5408,7 +5353,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1347,
     "boilingPoint": 3110,
-    "symbol": "Bk",
+    "symbol": "Cm",
     "strongLines": [
       414.7,
       418.9,
@@ -5461,7 +5406,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 985,
     "boilingPoint": 2627,
-    "symbol": "Cf",
+    "symbol": "Bk",
     "strongLines": [
       403.5,
       409.9,
@@ -5503,7 +5448,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 899,
     "boilingPoint": 1472,
-    "symbol": "Es",
+    "symbol": "Cf",
     "strongLines": [
       408.2,
       410.7,
@@ -5538,7 +5483,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 860,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Es",
     "strongLines": [],
     "category": "actinide",
     "number": 99,
@@ -5561,7 +5506,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1527,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Fm",
     "strongLines": [],
     "category": "actinide",
     "number": 100,
@@ -5584,7 +5529,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 827,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Md",
     "strongLines": [],
     "category": "actinide",
     "number": 101,
@@ -5607,7 +5552,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 827,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "No",
     "strongLines": [],
     "category": "actinide",
     "number": 102,
@@ -5630,7 +5575,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 1627,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Lr",
     "strongLines": [],
     "category": "actinide",
     "number": 103,
@@ -5653,7 +5598,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": 2100,
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Rf",
     "strongLines": [],
     "category": "transition metal",
     "number": 104,
@@ -5676,7 +5621,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Db",
     "strongLines": [],
     "category": "transition metal",
     "number": 105,
@@ -5699,7 +5644,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Sg",
     "strongLines": [],
     "category": "transition metal",
     "number": 106,
@@ -5722,7 +5667,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Bh",
     "strongLines": [],
     "category": "transition metal",
     "number": 107,
@@ -5745,7 +5690,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Hs",
     "strongLines": [],
     "category": "transition metal",
     "number": 108,
@@ -5768,7 +5713,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Mt",
     "strongLines": [],
     "category": "unknown",
     "number": 109,
@@ -5791,7 +5736,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Ds",
     "strongLines": [],
     "category": "unknown",
     "number": 110,
@@ -5814,7 +5759,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Rg",
     "strongLines": [],
     "category": "unknown",
     "number": 111,
@@ -5837,7 +5782,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Cn",
     "strongLines": [],
     "category": "unknown",
     "number": 112,
@@ -5860,7 +5805,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Nh",
     "strongLines": [],
     "category": "unknown",
     "number": 113,
@@ -5883,7 +5828,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Fl",
     "strongLines": [],
     "category": "unknown",
     "number": 114,
@@ -5906,7 +5851,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Mc",
     "strongLines": [],
     "category": "unknown",
     "number": 115,
@@ -5929,7 +5874,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": "unknown",
-    "symbol": "",
+    "symbol": "Lv",
     "strongLines": [],
     "category": "unknown",
     "number": 116,
@@ -5952,7 +5897,7 @@
     "phaseAtStandardTemperatureAndPressure": "solid",
     "meltingPoint": "unknown",
     "boilingPoint": 610,
-    "symbol": "",
+    "symbol": "Ts",
     "strongLines": [],
     "category": "unknown",
     "number": 117,
@@ -5985,6 +5930,7 @@
       32,
       18,
       8
-    ]
+    ],
+    "symbol": "Og"
   }
 ]

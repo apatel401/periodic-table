@@ -39,7 +39,8 @@ const Element = forwardRef(({num}, ref) => {
     element.category,
     hover ? 'active' : '',
     !isActive && context.activeElements !== null && !context.clearSelection ? 'disabled' : '',
-    isActive ? "group-active" : ''
+    isActive ? "group-active" : '',
+    context.activeElements?.length > 100 ? "all" : ''
   ].filter(Boolean).join(' ');
 
   return element && (

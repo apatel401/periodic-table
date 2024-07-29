@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
 
 const Dropdown = forwardRef(({ options, mainLabel, value, onChange }, ref) => {
 
