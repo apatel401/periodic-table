@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 import {  useRef, useContext, useEffect } from "react";
 import Element from "./Element";
-import { PeriodicTableContext } from "./Provider";
+import { PeriodicTableConfig, PeriodicTableContext } from "./Provider";
 import ElementDetails from "./ElementDetails";
 
 const PeriodicTable = () => {
   const context = useContext(PeriodicTableContext)
+  const config = useContext(PeriodicTableConfig)
   const elemRefs = useRef([]);
 
   useEffect(() => {
@@ -29,8 +30,8 @@ const PeriodicTable = () => {
   };
 
 
-  return context.showInfo ? <ElementDetails /> : (
-    <div className="periodic-table-wrapper">
+  return  (
+    <div className="periodic-table-wrapper" style={{marginTop: !config.settings.dropdown && "25px"}}>
       {/* Need to use useElement to split the elements 
     into different parts to achieve real periodic table shape */}
       {showElement(1, 4)}
@@ -46,8 +47,9 @@ const PeriodicTable = () => {
       {showElement(58, 71)}
       {/* Actionoids 90-103 */}
       {showElement(90, 103)}
+      { context.showInfo && <ElementDetails />}
     </div>
-)
-};
+);
+}
 
 export default PeriodicTable;

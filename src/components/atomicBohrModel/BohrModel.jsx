@@ -19,7 +19,7 @@ export default function BohrModel({shells, atoms}) {
     <group key={index}>
     <mesh rotation={[0,Math.PI / 2,0]} ref={meshRef}>
       <torusGeometry args={[8 + (index*2), 0.05, 32, 100]} />
-      <meshPhongMaterial color={"0xffffff4d"}/>
+      <meshPhongMaterial color={"#ffffff"}/>
     </mesh>
     <MainAtom key={index} torusIndex={index} numOfAtoms={atoms}/>
     </group>

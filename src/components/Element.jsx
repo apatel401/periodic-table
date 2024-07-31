@@ -6,7 +6,7 @@ const Element = forwardRef(({num}, ref) => {
 
   const context = useContext(PeriodicTableContext)
   const config = useContext(PeriodicTableConfig)
-  let element = config[num];
+  let element = config.elements[num];
   const [hover, setHover] = useState(false);
 
   useEffect(() => {

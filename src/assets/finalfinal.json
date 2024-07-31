@@ -1,4 +1,11 @@
-[
+{
+  "title" : "Periodic Table",
+  "settings": {
+    "dropdown" : false,
+    "bohrModel" : true,
+    "spectra" : true
+  },
+  "elements" : [
   {
     "name": "None",
     "summary": "Place of zero so that the array starts with 1 with hydrogen"
@@ -5933,4 +5940,4 @@
     ],
     "symbol": "Og"
   }
-]
+]}

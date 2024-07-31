@@ -20,7 +20,7 @@ const App = (props) => {
     return Object.keys(config).length > 0 ? (
         <div className="periodic-table-container">
             <ProviderComponent config={config}>
-                <SelectionBtns />
+                {config.settings.dropdown && <SelectionBtns />}
                 <PeriodicTable />
             </ProviderComponent>
         </div>
