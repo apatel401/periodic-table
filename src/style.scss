@@ -14,9 +14,10 @@ body {
   background-color: $color;
   color: white;
   border: 2px solid $color;
-  &:focus{
+
+  &:focus {
     outline: none;
-    border:3px solid #171717;
+    border: 3px solid #171717;
   }
 }
 
@@ -62,9 +63,10 @@ body {
         @include bordered(rgb(223, 209, 209))
       }
 
-      &.group-active:not(.all){
+      &.group-active:not(.all) {
         background-color: #02963b !important;
         border: 2px solid #02963b !important;
+
         &:focus {
           border: 2px solid white !important;
         }
@@ -122,55 +124,7 @@ body {
       // margin-left: 5px;
       // }
 
-      &.diatomic,
-      &.polyatomic {
-        @include elementStyle(#244d90)
-      }
 
-      &.unknown {
-        @include elementStyle(#454646)
-      }
-
-      &.noble {
-        @include elementStyle( #d11074)
-      }
-
-      &.alkali {
-        @include elementStyle( #244d57)
-      }
-
-      &.alkaline {
-        @include elementStyle( #bf1b41)
-      }
-
-      &.metalloid {
-        @include elementStyle( #757373);
-      }
-
-      &.halogen {
-        @include elementStyle( rgb(11, 121, 11));
-      }
-
-      &.transition {
-        @include elementStyle( rgb(163, 33, 163))
-      }
-
-      &.lanthanide {
-        @include elementStyle( blueviolet);
-        margin-top: 2rem;
-      }
-
-      &.element-57 {
-        margin-top: 0;
-      }
-
-      &.actinide {
-        @include elementStyle( goldenrod);
-      }
-
-      &.post-transition {
-        @include elementStyle( orangered);
-      }
 
     }
 
@@ -207,8 +161,9 @@ body {
       max-width: 500px;
       width: 100%;
       position: relative;
-      box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+      box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
     }
+
     .element-close-button {
       position: absolute;
       top: 10px;
@@ -218,27 +173,58 @@ body {
       font-size: 2.5rem;
       cursor: pointer;
     }
+
     .s-row {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
 
+      .col-0 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .col-1{
+        margin-bottom: 1rem;
+      }
+
       .col-1,
       .col-2 {
         width: 50%;
+        margin-left: 1rem;
+      }
+      span{
+        display: block;
       }
       .row-1 {
         display: flex;
         justify-content: space-between;
-    }
-    .col-3 {
-      display: flex;
-      width: 150px;
-      height: 150px;
-      flex-direction: column;
-      background-color: #02963b;
-      justify-content: center;
-  }
+      }
+
+      .row-2 p {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .row-3 p {
+        font-size: 1.25rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .row-2,
+      .row-3,
+      .row-4 {
+        text-align: center;
+      }
+
+      .col-3 {
+        display: flex;
+        width: 150px;
+        padding: 0.25rem;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
     p {
@@ -315,4 +301,54 @@ div#spectra {
   padding-left: calc(0.9%);
   font-size: 2vmin;
   color: rgba(255, 255, 255, 1.00);
+}
+
+.diatomic,
+.polyatomic {
+  @include elementStyle(#244d90)
+}
+
+.unknown {
+  @include elementStyle(#454646)
+}
+
+.noble {
+  @include elementStyle(#d11074)
+}
+
+.alkali {
+  @include elementStyle(#244d57)
+}
+
+.alkaline {
+  @include elementStyle(#bf1b41)
+}
+
+.metalloid {
+  @include elementStyle(#757373);
+}
+
+.halogen {
+  @include elementStyle(rgb(11, 121, 11));
+}
+
+.transition {
+  @include elementStyle(rgb(163, 33, 163))
+}
+
+.lanthanide {
+  @include elementStyle(blueviolet);
+  margin-top: 2rem;
+}
+
+.element-57 {
+  margin-top: 0;
+}
+
+.actinide {
+  @include elementStyle(goldenrod);
+}
+
+.post-transition {
+  @include elementStyle(orangered);
 }

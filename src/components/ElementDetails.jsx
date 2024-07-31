@@ -45,42 +45,43 @@ const ElementDetails = () => {
                     <h2>Name: {currentElement.name}</h2>
                 </div>
                 <div className="s-row">
+                    <div className='col-0'>
+                        <div className={'col-3 ' + context.currentElement.category}>
+                            <div className='row-1'>
+                                <p style={{ fontSize: "1.5rem" }}>{currentElement.atomicNumber}</p>
+                                <p style={{ fontSize: "1rem", wordBreak: "break-word", wordWrap: "break-word", textAlign: "right" }}>{currentElement.averageAtomicMass}</p>
+                            </div>
+                            <div className='row-2'>
+                                <p>{currentElement.symbol}</p>
+                            </div>
+                            <div className='row-3'>
+                                <p>{currentElement.name}</p>
+                            </div>
+                            <div className='row-4'>
+                                <p>{currentElement.category}</p>
+                            </div>
+                        </div>
+                    </div>
                     <div className="col-1">
                         <p>Average Atomic Mass (amu): {currentElement.averageAtomicMass}</p>
                         <p>Atomic Number: {currentElement.atomicNumber}</p>
                         <p>boilingPoint: {currentElement.boilingPoint}</p>
                         <p>Common Oxidation States: {currentElement.commonOxidationStates}</p>
-                    </div>
-                    <div className="col-2">
                         <p>melting point: {currentElement.meltingPoint}</p>
                         <p>electronegativity: {currentElement.electronegativity}</p>
                         <p>Phase at Standard Temperature and Pressure: {currentElement.phaseAtStandardTemperatureAndPressure}</p>
-                        <p>Group: {groupLabel()}</p>
-                        <p>Period: {periodLabel()}</p>
-                    </div>
-                    <div className='col-3'>
-                        <div className='row-1'>
-                            <p>{currentElement.atomicNumber}</p>
-                            <p>{currentElement.averageAtomicMass}</p>
-                        </div>
-                        <div className='row-2'>
-                            <p>{currentElement.symbol}</p>
-                        </div>
-                        <div className='row-3'>
-                            <p>{currentElement.name}</p>
-                        </div>
-                        <div className='row-4'>
-                            <p>{currentElement.category}</p>
+                        <div style={{    display: "flex",    justifyContent: "space-around", textAlign: "center"}}>
+                        <p>Group <span>{groupLabel()}</span></p>
+                        <p>Period <span>{periodLabel()}</span></p>
                         </div>
                     </div>
                 </div>
                 {config.settings.spectra && <div id="spectra"></div>}
 
-                <div className="col-3">
-                    <p>Summary: {currentElement.summary}</p>
+                {config.settings.bohrModel && (<div className="col-3">
                     <p>Atomic bohr Model: </p>
-                    {config.settings.bohrModel && <AtomicBohrModel />}
-                </div>
+                    <AtomicBohrModel />
+                </div>)}
             </div>
         </div>
     )

@@ -15,8 +15,6 @@ export default function ProviderComponent(props) {
     }
 
     const contextInformation = {
-
-
         announcements: "",
         currentElement: null,
         current: null,
