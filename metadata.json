@@ -1,0 +1,5 @@
+{
+  "name": "3D Periodic Table Explorer",
+  "description": "An interactive periodic table with 3D Bohr atom visualizations using React Three Fiber and Material UI.",
+  "requestFramePermissions": []
+}
