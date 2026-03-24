@@ -1,6 +1,6 @@
 import { X } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { BohrModel } from './BohrModel';
 import { Spectrum } from './Spectrum';
 import { ElementModalProps } from '../types';
@@ -10,20 +10,27 @@ import { motion, AnimatePresence } from 'motion/react';
 export const ElementModal = ({ 
   element, 
   onClose, 
-  isDarkMode,
-  showSpectrum = true,
-  showBohrModel = true
+  isDarkMode
 }: ElementModalProps) => {
   const [isEntered, setIsEntered] = useState(false);
 
   useEffect(() => {
     if (element) {
       const timer = setTimeout(() => setIsEntered(true), 300);
-      return () => clearTimeout(timer);
+      
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') onClose();
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       setIsEntered(false);
     }
-  }, [element]);
+  }, [element, onClose]);
 
   return (
     <AnimatePresence>
@@ -54,12 +61,11 @@ export const ElementModal = ({
             </button>
 
             {/* 3D Scene */}
-            {showBohrModel && (
-              <div 
-                className="w-full md:w-1/2 h-[300px] md:h-[500px] bg-slate-900 dark:bg-black relative overflow-hidden flex items-center justify-center"
-                role="img"
-                aria-label={`3D Bohr model for ${element.name}`}
-              >
+            <div 
+              className="w-full md:w-1/2 h-[300px] md:h-[500px] bg-slate-900 dark:bg-black relative overflow-hidden flex items-center justify-center"
+              role="img"
+              aria-label={`3D Bohr model for ${element.name}`}
+            >
                 {isEntered ? (
                   <Canvas 
                     key={element.number}
@@ -98,10 +104,9 @@ export const ElementModal = ({
                   Interactive 3D Bohr Model
                 </div>
               </div>
-            )}
 
             {/* Metadata */}
-            <div className={`w-full ${showBohrModel ? 'md:w-1/2' : 'md:w-full'} flex-1 p-6 md:p-8 overflow-y-auto`}>
+            <div className="w-full md:w-1/2 flex-1 p-6 md:p-8 overflow-y-auto">
               <div className="flex items-baseline gap-2 mb-1 md:mb-2">
                 <h2 className="text-2xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
                   {element.symbol}
@@ -148,7 +153,7 @@ export const ElementModal = ({
                 </div>
               </div>
 
-              {showSpectrum && element.strongLines && element.strongLines.length > 0 && (
+              {element.strongLines && element.strongLines.length > 0 && (
                 <Spectrum lines={element.strongLines} />
               )}
 

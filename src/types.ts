@@ -44,8 +44,6 @@ export interface ElementModalProps {
   element: ElementData | null;
   onClose: () => void;
   isDarkMode: boolean;
-  showSpectrum?: boolean;
-  showBohrModel?: boolean;
 }
 
 export interface BohrModelProps {

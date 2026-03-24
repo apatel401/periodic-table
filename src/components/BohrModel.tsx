@@ -1,6 +1,6 @@
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera, Text } from '@react-three/drei';
+import { Text } from '@react-three/drei';
 import * as THREE from 'three';
 import { BohrModelProps, ElectronProps, ShellProps } from '../types';
 
@@ -30,6 +30,17 @@ const Electron = ({ radius, speed, offset }: ElectronProps) => {
 };
 
 const Shell = ({ radius, count, shellIndex }: ShellProps) => {
+  const electrons = useMemo(() => {
+    return Array.from({ length: count }).map((_, i) => (
+      <Electron
+        key={i}
+        radius={radius}
+        speed={1 / (shellIndex + 1)}
+        offset={(i * 2 * Math.PI) / count}
+      />
+    ));
+  }, [count, radius, shellIndex]);
+
   return (
     <group>
       {/* Orbit Ring */}
@@ -46,14 +57,7 @@ const Shell = ({ radius, count, shellIndex }: ShellProps) => {
       </mesh>
 
       {/* Electrons */}
-      {Array.from({ length: count }).map((_, i) => (
-        <Electron
-          key={i}
-          radius={radius}
-          speed={1 / (shellIndex + 1)}
-          offset={(i * 2 * Math.PI) / count}
-        />
-      ))}
+      {electrons}
     </group>
   );
 };

@@ -47,15 +47,15 @@ export const elements: ElementData[] = [
 ];
 
 export const categoryColors: Record<ElementCategory, string> = {
-  "diatomic nonmetal": "bg-blue-100 dark:bg-blue-900/30",
-  "noble gas": "bg-purple-100 dark:bg-purple-900/30",
-  "alkali metal": "bg-red-100 dark:bg-red-900/30",
-  "alkaline earth metal": "bg-orange-100 dark:bg-orange-900/30",
-  "metalloid": "bg-green-100 dark:bg-green-900/30",
-  "polyatomic nonmetal": "bg-blue-200 dark:bg-blue-800/30",
-  "post-transition metal": "bg-indigo-100 dark:bg-indigo-900/30",
-  "transition metal": "bg-yellow-100 dark:bg-yellow-900/30",
-  "lanthanide": "bg-pink-100 dark:bg-pink-900/30",
-  "actinide": "bg-pink-200 dark:bg-pink-800/30",
-  "halogen (non-metal)": "bg-teal-100 dark:bg-teal-900/30",
+  "diatomic nonmetal": "bg-blue-100 dark:bg-blue-500/30",
+  "noble gas": "bg-purple-100 dark:bg-purple-500/30",
+  "alkali metal": "bg-red-100 dark:bg-red-500/30",
+  "alkaline earth metal": "bg-orange-100 dark:bg-orange-500/30",
+  "metalloid": "bg-green-100 dark:bg-green-500/30",
+  "polyatomic nonmetal": "bg-blue-200 dark:bg-blue-500/30",
+  "post-transition metal": "bg-indigo-100 dark:bg-indigo-500/30",
+  "transition metal": "bg-yellow-100 dark:bg-yellow-500/30",
+  "lanthanide": "bg-pink-100 dark:bg-pink-500/30",
+  "actinide": "bg-pink-200 dark:bg-pink-500/30",
+  "halogen (non-metal)": "bg-teal-100 dark:bg-teal-500/30",
 };

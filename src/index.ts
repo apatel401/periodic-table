@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PeriodicTable, PeriodicTableProps } from './App';
+import { PeriodicTable } from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './index.css';
 
@@ -12,13 +12,12 @@ export const version = __APP_VERSION__;
 
 // Export the React component for React users
 export { PeriodicTable };
-export type { PeriodicTableProps };
 
 /**
  * Standalone init function for non-React users.
- * This can be used as window.PeriodicTable.init('#div-id', { darkMode: true })
+ * This can be used as window.PeriodicTable.init('#div-id')
  */
-export function init(selector: string, props: PeriodicTableProps = {}) {
+export function init(selector: string, props: any = {}) {
   const container = document.querySelector(selector);
   if (!container) {
     console.error(`[PeriodicTable] Element not found for selector: ${selector}`);

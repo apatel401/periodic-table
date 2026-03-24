@@ -5,21 +5,11 @@ import { ElementModal } from './components/ElementModal';
 import { motion } from 'motion/react';
 import { ElementCategory } from './types';
 
-export interface PeriodicTableProps {
-  darkMode?: boolean;
-  showSpectrum?: boolean;
-  showBohrModel?: boolean;
-}
-
-export function PeriodicTable({ 
-  darkMode: propDarkMode,
-  showSpectrum = true,
-  showBohrModel = true
-}: PeriodicTableProps) {
+export function PeriodicTable() {
   const [selectedElement, setSelectedElement] = useState<ElementData | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<ElementCategory | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(propDarkMode ?? false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   // Filter elements based on search query
@@ -38,50 +28,23 @@ export function PeriodicTable({
     });
   }, [searchQuery]);
 
-  // Handle window resize for isMobile
+  // Handle window resize and theme detection
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Sync with prop
-  useEffect(() => {
-    if (propDarkMode !== undefined) {
-      setIsDarkMode(propDarkMode);
-    }
-  }, [propDarkMode]);
-
-  // Cleanup stray classes from html that might have been added in previous versions
-  useEffect(() => {
-    document.documentElement.classList.remove('dark');
-  }, []);
-
-  // Sync with domContainer (root element) - Read only from root
-  useEffect(() => {
-    // If darkMode prop is provided, we skip the AIS-specific root attribute sync
-    if (propDarkMode !== undefined) return;
-
-    const root = document.getElementById('root');
-    if (!root) return;
-
+    
     const checkDarkMode = () => {
-      // Check for .dark class on the root element
-      const hasDarkClass = root.classList.contains('dark');
+      const root = document.getElementById('root');
+      if (!root) return;
       
-      // Check for darkmode="true" attribute (case-insensitive)
+      const hasDarkClass = root.classList.contains('dark');
       const attrValue = root.getAttribute('darkmode') || root.getAttribute('darkMode');
       const hasDarkAttr = attrValue === 'true';
-      
       const shouldBeDark = hasDarkClass || hasDarkAttr;
-      console.log(`[Theme Sync] Root state: class="dark": ${hasDarkClass}, darkmode="true": ${hasDarkAttr} -> Final: ${shouldBeDark ? 'DARK' : 'LIGHT'}`);
       
       setIsDarkMode(shouldBeDark);
-
-      // Sync .dark class to body for portaled components (like Modals)
+      
       if (shouldBeDark) {
         document.body.classList.add('dark');
       } else {
@@ -89,23 +52,11 @@ export function PeriodicTable({
       }
     };
 
-    // Initial check on mount
+    handleResize();
     checkDarkMode();
-
-    // Watch for changes to the root element's attributes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes') {
-          const attrName = mutation.attributeName?.toLowerCase();
-          if (attrName === 'class' || attrName === 'darkmode') {
-            checkDarkMode();
-          }
-        }
-      });
-    });
-
-    observer.observe(root, { attributes: true });
-    return () => observer.disconnect();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const categories: { name: string; type: ElementCategory; color: string }[] = [
@@ -236,8 +187,6 @@ export function PeriodicTable({
         element={selectedElement}
         onClose={() => setSelectedElement(null)}
         isDarkMode={isDarkMode}
-        showSpectrum={showSpectrum}
-        showBohrModel={showBohrModel}
       />
       
     </section>
