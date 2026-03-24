@@ -109,27 +109,28 @@ export function PeriodicTable({
   }, []);
 
   const categories: { name: string; type: ElementCategory; color: string }[] = [
-    { name: 'Alkali', type: 'alkali metal', color: 'bg-red-100 dark:bg-red-900/30' },
-    { name: 'Alkaline Earth', type: 'alkaline earth metal', color: 'bg-orange-100 dark:bg-orange-900/30' },
-    { name: 'Transition', type: 'transition metal', color: 'bg-yellow-100 dark:bg-yellow-900/30' },
-    { name: 'Post-Transition', type: 'post-transition metal', color: 'bg-indigo-100 dark:bg-indigo-900/30' },
-    { name: 'Metalloids', type: 'metalloid', color: 'bg-green-100 dark:bg-green-900/30' },
-    { name: 'Nonmetals', type: 'polyatomic nonmetal', color: 'bg-blue-200 dark:bg-blue-800/30' },
-    { name: 'Halogens', type: 'halogen (non-metal)', color: 'bg-teal-100 dark:bg-teal-900/30' },
-    { name: 'Noble Gases', type: 'noble gas', color: 'bg-purple-100 dark:bg-purple-900/30' },
-    { name: 'Lanthanides', type: 'lanthanide', color: 'bg-pink-100 dark:bg-pink-900/30' },
-    { name: 'Actinides', type: 'actinide', color: 'bg-pink-200 dark:bg-pink-800/30' },
+    { name: 'Alkali', type: 'alkali metal', color: 'bg-red-100 dark:bg-red-500/40' },
+    { name: 'Alkaline Earth', type: 'alkaline earth metal', color: 'bg-orange-100 dark:bg-orange-500/40' },
+    { name: 'Transition', type: 'transition metal', color: 'bg-yellow-100 dark:bg-yellow-500/40' },
+    { name: 'Post-Transition', type: 'post-transition metal', color: 'bg-indigo-100 dark:bg-indigo-500/40' },
+    { name: 'Metalloids', type: 'metalloid', color: 'bg-green-100 dark:bg-green-500/40' },
+    { name: 'Nonmetals', type: 'polyatomic nonmetal', color: 'bg-blue-200 dark:bg-blue-500/40' },
+    { name: 'Halogens', type: 'halogen (non-metal)', color: 'bg-teal-100 dark:bg-teal-500/40' },
+    { name: 'Noble Gases', type: 'noble gas', color: 'bg-purple-100 dark:bg-purple-500/40' },
+    { name: 'Lanthanides', type: 'lanthanide', color: 'bg-pink-100 dark:bg-pink-500/40' },
+    { name: 'Actinides', type: 'actinide', color: 'bg-pink-200 dark:bg-pink-500/40' },
   ];
 
   return (
-    <section 
-      className={`bg-slate-50 dark:bg-slate-950 p-2 font-sans min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark' : ''}`}
-      aria-labelledby="periodic-table-title"
-    >
+    <div className={`periodic-table-lib ${isDarkMode ? 'dark' : ''}`}>
+      <section 
+        className="bg-slate-50 dark:bg-slate-950 p-2 font-sans min-h-screen transition-colors duration-300"
+        aria-labelledby="periodic-table-title"
+      >
       <div className="max-w-7xl mx-auto mb-8 space-y-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="flex-1">
-            <div className="mb-2 text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
+            <div className="mb-2 text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
               Element Categories
             </div>
             <div 
@@ -140,7 +141,7 @@ export function PeriodicTable({
               {categories.map((cat) => (
                 <div 
                   key={cat.type}
-                  className={`flex items-center gap-1.5 md:gap-2 px-1.5 md:px-2 py-1 md:py-1.5 rounded-md transition-all duration-200 cursor-default border border-transparent ${hoveredCategory === cat.type ? 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 shadow-sm scale-[1.02] text-slate-900 dark:text-white' : 'opacity-70 hover:opacity-100'}`}
+                  className={`flex items-center gap-1.5 md:gap-2 px-1.5 md:px-2 py-1 md:py-1.5 rounded-md transition-all duration-200 cursor-default border border-transparent ${hoveredCategory === cat.type ? 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 shadow-sm scale-[1.02] text-slate-900 dark:text-white' : 'opacity-60 dark:opacity-80 hover:opacity-100 text-slate-600 dark:text-slate-300'}`}
                   onMouseEnter={() => setHoveredCategory(cat.type)}
                   onMouseLeave={() => setHoveredCategory(null)}
                 >
@@ -240,5 +241,6 @@ export function PeriodicTable({
       />
       
     </section>
+    </div>
   );
 }

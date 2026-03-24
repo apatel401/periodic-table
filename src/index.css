@@ -14,6 +14,44 @@
   .dark {
     --modal-bg: #0f172a;
   }
+  
+  /* Scoped Reset for the library */
+  .periodic-table-lib {
+    /* Reset basic properties for the container and all children */
+    &, & *, & *::before, & *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0 solid transparent;
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Block global element styles from leaking in */
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    & a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    & button {
+      background: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    & input {
+      font: inherit;
+    }
+  }
+
   body {
     @apply bg-slate-50 text-slate-900;
     margin: 0;

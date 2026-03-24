@@ -40,12 +40,12 @@ export const Spectrum = ({ lines }: SpectrumProps) => {
     <div className="mt-6" role="region" aria-label={`Emission spectrum for ${lines.length} lines`}>
       <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-200 mb-2">Emission Spectrum</h3>
       <div 
-        className="relative w-full h-12 bg-black rounded overflow-hidden border border-slate-200 dark:border-slate-800"
+        className="relative w-full h-12 bg-slate-900 dark:bg-black rounded overflow-hidden border border-slate-200 dark:border-slate-800"
         aria-hidden="true"
       >
         {/* Background gradient for reference */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-20 dark:opacity-10"
           style={{
             background: 'linear-gradient(to right, #8b00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff7f00, #ff0000)'
           }}

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 import dts from 'vite-plugin-dts';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import pkg from './package.json';
 
 export default defineConfig(({mode}) => {
@@ -20,6 +21,7 @@ export default defineConfig(({mode}) => {
     plugins: [
       react(), 
       tailwindcss(),
+      cssInjectedByJsPlugin(),
       dts({
         insertTypesEntry: true,
         include: ['src'],
