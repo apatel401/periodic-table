@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { PeriodicTable } from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './index.css';
@@ -24,27 +24,16 @@ export function init(selector: string, props: any = {}) {
     return;
   }
 
-  const element = React.createElement(ErrorBoundary, null, 
-    React.createElement(PeriodicTable, props)
+  const element = (
+    <ErrorBoundary>
+      <PeriodicTable {...props} />
+    </ErrorBoundary>
   );
 
-  // Check if we are in React 18+ environment
-  // @ts-ignore
-  const isReact18 = !!ReactDOM.createRoot;
-
-  if (isReact18) {
-    // For React 18+, we use createRoot
-    // @ts-ignore
-    const root = ReactDOM.createRoot(container);
-    root.render(element);
-    return {
-      unmount: () => root.unmount(),
-    };
-  } else {
-    // For React 17 and below, we use ReactDOM.render
-    ReactDOM.render(element, container);
-    return {
-      unmount: () => ReactDOM.unmountComponentAtNode(container),
-    };
-  }
+  const root = createRoot(container);
+  root.render(element);
+  
+  return {
+    unmount: () => root.unmount(),
+  };
 }

@@ -1,11 +1,11 @@
+import React, { Suspense, useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { BohrModel } from './BohrModel';
 import { Spectrum } from './Spectrum';
 import { ElementModalProps } from '../types';
-import { Suspense, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const ElementModal = ({ 
   element, 

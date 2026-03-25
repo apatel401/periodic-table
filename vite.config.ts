@@ -1,13 +1,12 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import pkg from './package.json';
 
 export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
   const banner = `/*!
  * ${pkg.name} v${pkg.version}
  * (c) ${new Date().getFullYear()} STEM Dev
@@ -17,9 +16,10 @@ export default defineConfig(({mode}) => {
   return {
     define: {
       __APP_VERSION__: JSON.stringify(pkg.version),
+      'process.env.NODE_ENV': JSON.stringify(mode === 'production' ? 'production' : 'development'),
     },
     plugins: [
-      react(), 
+      react({ jsxRuntime: 'classic' }), 
       tailwindcss(),
       cssInjectedByJsPlugin(),
       dts({
@@ -32,37 +32,18 @@ export default defineConfig(({mode}) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
+      dedupe: ['react', 'react-dom'],
     },
     build: {
       lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
+        entry: path.resolve(__dirname, 'src/index.tsx'),
         name: 'PeriodicTable',
         formats: mode === 'umd' ? ['umd'] : ['es', 'cjs'],
         fileName: (format) => `index.${format}.js`,
       },
       rollupOptions: {
-        external: [
-          'react', 
-          'react-dom', 
-          'three', 
-          '@react-three/fiber', 
-          '@react-three/drei', 
-          'lucide-react', 
-          'motion',
-          'motion/react'
-        ],
         output: {
           banner,
-          globals: {
-            react: 'React',
-            'react-dom': 'ReactDOM',
-            three: 'THREE',
-            '@react-three/fiber': 'ReactThreeFiber',
-            '@react-three/drei': 'Drei',
-            'lucide-react': 'Lucide',
-            motion: 'Motion',
-            'motion/react': 'MotionReact'
-          },
         },
       },
       minify: true,

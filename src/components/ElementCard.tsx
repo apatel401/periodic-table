@@ -1,8 +1,8 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { categoryColors } from '../data';
 import { ElementCardProps } from '../types';
 
-export const ElementCard = memo(({ element, onClick, isDimmed, isMobile }: ElementCardProps) => {
+export const ElementCard = React.memo(({ element, onClick, isDimmed, isMobile }: ElementCardProps) => {
   const isPlaceholder = element.number > 118;
   const bgColor = isPlaceholder ? 'bg-transparent' : (categoryColors[element.category] || 'bg-gray-100');
 

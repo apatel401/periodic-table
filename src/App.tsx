@@ -1,8 +1,8 @@
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { elements, ElementData } from './data';
 import { ElementCard } from './components/ElementCard';
 import { ElementModal } from './components/ElementModal';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ElementCategory } from './types';
 
 export function PeriodicTable() {
