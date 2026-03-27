@@ -6,8 +6,11 @@ A modern, interactive periodic table library for React and standalone web applic
 - **Interactive 3D Visualization**: Explore atomic structures and properties.
 - **Responsive Design**: Optimized for both desktop and mobile layouts.
 - **Dark Mode Support**: Built-in dark mode with easy toggling.
-- **Library Mode**: Can be used as a React component or a standalone library.
+- **Dual Build Mode**: 
+  - **Standard Library**: Externalized dependencies (React, Three.js, etc.) for React projects.
+  - **Standalone UMD**: Bundled dependencies for direct browser use without a build step.
 - **TypeScript Support**: Full type definitions included.
+- **Zero-Config CSS**: Styles are automatically injected into the DOM.
 
 ## Installation
 
@@ -19,11 +22,10 @@ npm install @stem_dev/periodic-table
 
 ### React
 
-Import the `PeriodicTable` component and its styles into your React application.
+Import the `PeriodicTable` component into your React application. Styles are automatically injected.
 
 ```tsx
 import { PeriodicTable } from '@stem_dev/periodic-table';
-import '@stem_dev/periodic-table/style.css';
 
 function App() {
   return (
@@ -34,9 +36,9 @@ function App() {
 }
 ```
 
-### Standalone (Non-React)
+### Standalone (Non-React / UMD)
 
-You can use the `init` function to render the periodic table into any DOM element.
+For projects without a build system, use the standalone UMD build. This version includes React and all other dependencies bundled in a single file.
 
 ```html
 <!DOCTYPE html>
@@ -44,16 +46,22 @@ You can use the `init` function to render the periodic table into any DOM elemen
 <head>
   <meta charset="UTF-8">
   <title>Periodic Table Standalone</title>
-  <link rel="stylesheet" href="node_modules/@stem_dev/periodic-table/dist/style.css">
+  <!-- Load the standalone UMD build -->
+  <script src="node_modules/@stem_dev/periodic-table/dist/build/index.umd.js"></script>
 </head>
 <body>
-  <div id="periodic-table-container"></div>
+  <div id="periodic-table-container" style="height: 100vh;"></div>
 
-  <script type="module">
-    import { init } from '@stem_dev/periodic-table';
+  <script>
+    // The library is available under the global 'PeriodicTable' variable
+    const { init } = window.PeriodicTable;
 
-    const container = document.getElementById('periodic-table-container');
-    init(container, { darkMode: false });
+    // Initialize by passing a CSS selector and optional props
+    init('#periodic-table-container', { 
+      darkMode: true,
+      showSpectrum: true,
+      showBohrModel: true
+    });
   </script>
 </body>
 </html>
@@ -67,9 +75,18 @@ You can use the `init` function to render the periodic table into any DOM elemen
 | `showSpectrum` | `boolean` | `true` | Show/hide the emission spectrum in the element modal. |
 | `showBohrModel` | `boolean` | `true` | Show/hide the 3D Bohr model in the element modal. |
 
-## Styling
+## Development & Build
 
-The library uses **Tailwind CSS** for its internal styling. The pre-built CSS file (`@stem_dev/periodic-table/style.css`) includes all the necessary styles.
+The project uses a dual-config build system to provide both a lean library and a standalone bundle.
+
+- **Standard Build (ESM/CJS)**: `npm run build`
+  - Outputs to `dist/`
+  - Externalizes React, Three.js, etc.
+  - Included in the npm package.
+- **Standalone Build (UMD)**: `npm run build:umd`
+  - Outputs to `dist/build/`
+  - Bundles all dependencies.
+  - Excluded from the npm package to keep the install size small.
 
 ## License
 MIT
