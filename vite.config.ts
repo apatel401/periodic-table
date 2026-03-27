@@ -35,15 +35,32 @@ export default defineConfig(({mode}) => {
       dedupe: ['react', 'react-dom'],
     },
     build: {
+      emptyOutDir: false,
       lib: {
         entry: path.resolve(__dirname, 'src/index.tsx'),
         name: 'PeriodicTable',
-        formats: mode === 'umd' ? ['umd'] : ['es', 'cjs'],
+        formats: ['es', 'cjs'],
         fileName: (format) => `index.${format}.js`,
       },
       rollupOptions: {
+        // Externalize dependencies for standard library builds
+        external: [
+          'react',
+          'react-dom',
+          'three',
+          '@react-three/fiber',
+          '@react-three/drei',
+          'framer-motion',
+          'lucide-react',
+          'motion/react',
+        ],
         output: {
           banner,
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+            three: 'THREE',
+          },
         },
       },
       minify: true,

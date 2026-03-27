@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { PeriodicTable } from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './index.css';
@@ -30,10 +30,31 @@ export function init(selector: string, props: any = {}) {
     </ErrorBoundary>
   );
 
-  const root = createRoot(container);
-  root.render(element);
+  // Robust check for React 18+ in both bundled and external environments
+  // @ts-ignore
+  const reactDOM = (ReactDOM.default || ReactDOM) as any;
   
-  return {
-    unmount: () => root.unmount(),
-  };
+  // If we are in a slim build, ReactDOM might be on the window
+  const globalReactDOM = typeof window !== 'undefined' ? (window as any).ReactDOM : null;
+  const finalReactDOM = reactDOM || globalReactDOM;
+
+  if (!finalReactDOM) {
+    console.error('[PeriodicTable] ReactDOM not found. Please ensure React and ReactDOM are loaded.');
+    return;
+  }
+
+  const isReact18 = typeof finalReactDOM.createRoot === 'function';
+
+  if (isReact18) {
+    const root = finalReactDOM.createRoot(container);
+    root.render(element);
+    return {
+      unmount: () => root.unmount(),
+    };
+  } else {
+    finalReactDOM.render(element, container);
+    return {
+      unmount: () => finalReactDOM.unmountComponentAtNode(container),
+    };
+  }
 }
