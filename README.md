@@ -1,16 +1,34 @@
-# @stem_dev/periodic-table
+# 3D Periodic Table Explorer
 
-A modern, interactive periodic table library for React and standalone web applications.
+A modern, interactive periodic table library for React and standalone web applications. Explore the elements with high-fidelity 3D Bohr atom visualizations, emission spectra, and detailed physical properties.
+
+[**🚀 Live Demo**](https://stem-dev-periodic-table.netlify.app)
+
+![Periodic Table Preview](/light.png/)
 
 ## Features
-- **Interactive 3D Visualization**: Explore atomic structures and properties.
-- **Responsive Design**: Optimized for both desktop and mobile layouts.
-- **Dark Mode Support**: Built-in dark mode with easy toggling.
-- **Dual Build Mode**: 
-  - **Standard Library**: Externalized dependencies (React, Three.js, etc.) for React projects.
-  - **Standalone UMD**: Bundled dependencies for direct browser use without a build step.
-- **TypeScript Support**: Full type definitions included.
-- **Zero-Config CSS**: Styles are automatically injected into the DOM.
+
+- **Interactive 3D Bohr Models**: Real-time 3D visualization of electron shells using React Three Fiber.
+- **Emission Spectra**: Visual representation of atomic emission lines for each element.
+- **Responsive Design**: Fluid layout that works seamlessly on mobile, tablet, and desktop.
+- **Advanced Search**: Quickly find elements by name, symbol, atomic number, or category.
+- **Category Highlighting**: Interactive legend to highlight specific groups of elements.
+- **Dark Mode Support**: Native dark mode detection and manual toggle support.
+- **Dual Build System**: 
+  - **Standard Library**: Optimized ESM/CJS builds for React projects.
+  - **Standalone UMD**: Full bundle with all dependencies for direct browser use.
+
+## Screenshots
+
+### Light & Dark Modes
+| Light Mode | Dark Mode |
+| :---: | :---: |
+| ![Light Mode](/light.png) | ![Dark Mode](/dark.png) |
+
+### Interactive Features
+| 3D Bohr Model | Emission Spectrum |
+| :---: | :---: |
+| ![Bohr Model](/bohr-model.png) | ![Emission Spectrum](/spectra.png) |
 
 ## Installation
 
@@ -20,73 +38,80 @@ npm install @stem_dev/periodic-table
 
 ## Usage
 
-### React
+### React Integration
 
-Import the `PeriodicTable` component into your React application. Styles are automatically injected.
+The library exports a `PeriodicTable` component that can be dropped into any React application.
 
 ```tsx
 import { PeriodicTable } from '@stem_dev/periodic-table';
 
 function App() {
   return (
-    <div className="app">
-      <PeriodicTable darkMode={true} />
+    <div style={{ height: '100vh' }}>
+      <PeriodicTable 
+        darkMode={true} 
+        showSpectrum={true} 
+        showBohrModel={true} 
+      />
     </div>
   );
 }
 ```
 
-### Standalone (Non-React / UMD)
+### Standalone (UMD)
 
-For projects without a build system, use the standalone UMD build. This version includes React and all other dependencies bundled in a single file.
+For projects without a build system, use the standalone UMD build.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Periodic Table Standalone</title>
-  <!-- Load the standalone UMD build -->
-  <script src="node_modules/@stem_dev/periodic-table/dist/build/index.umd.js"></script>
-</head>
-<body>
-  <div id="periodic-table-container" style="height: 100vh;"></div>
+<div id="periodic-table-root" style="height: 100vh;"></div>
 
-  <script>
-    // The library is available under the global 'PeriodicTable' variable
-    const { init } = window.PeriodicTable;
-
-    // Initialize by passing a CSS selector and optional props
-    init('#periodic-table-container', { 
-      darkMode: true,
-      showSpectrum: true,
-      showBohrModel: true
-    });
-  </script>
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/@stem_dev/periodic-table/dist/build/index.umd.js"></script>
+<script>
+  const { init } = window.PeriodicTable;
+  init('#periodic-table-root', { 
+    darkMode: true 
+  });
+</script>
 ```
 
 ## Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `darkMode` | `boolean` | `false` | Enables or disables dark mode. |
+| `darkMode` | `boolean` | `false` | Force dark mode (overrides system/root detection). |
 | `showSpectrum` | `boolean` | `true` | Show/hide the emission spectrum in the element modal. |
 | `showBohrModel` | `boolean` | `true` | Show/hide the 3D Bohr model in the element modal. |
 
-## Development & Build
+## Project Structure
 
-The project uses a dual-config build system to provide both a lean library and a standalone bundle.
+- `src/components/`: React components (BohrModel, Spectrum, etc.)
+- `src/data.ts`: Element data and coordinate mapping.
+- `src/types.ts`: TypeScript interfaces and types.
+- `vite.config.ts`: Library build configuration.
+- `vite.umd.config.ts`: Standalone bundle configuration.
 
-- **Standard Build (ESM/CJS)**: `npm run build`
-  - Outputs to `dist/`
-  - Externalizes React, Three.js, etc.
-  - Included in the npm package.
-- **Standalone Build (UMD)**: `npm run build:umd`
-  - Outputs to `dist/build/`
-  - Bundles all dependencies.
-  - Excluded from the npm package to keep the install size small.
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build library (ESM/CJS)
+npm run build
+
+# Build standalone bundle (UMD)
+npm run build:umd
+
+# Build interactive demo (outputs to /public)
+npm run build:demo
+
+# Linting
+npm run lint
+```
 
 ## License
-MIT
+
+MIT © [STEM Dev](https://github.com/apatel401)

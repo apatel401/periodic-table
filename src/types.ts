@@ -40,10 +40,18 @@ export interface ElementCardProps {
   isMobile?: boolean;
 }
 
+export interface PeriodicTableProps {
+  darkMode?: boolean;
+  showSpectrum?: boolean;
+  showBohrModel?: boolean;
+}
+
 export interface ElementModalProps {
   element: ElementData | null;
   onClose: () => void;
   isDarkMode: boolean;
+  showSpectrum?: boolean;
+  showBohrModel?: boolean;
 }
 
 export interface BohrModelProps {

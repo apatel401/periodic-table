@@ -3,13 +3,17 @@ import { elements, ElementData } from './data';
 import { ElementCard } from './components/ElementCard';
 import { ElementModal } from './components/ElementModal';
 import { motion } from 'framer-motion';
-import { ElementCategory } from './types';
+import { ElementCategory, PeriodicTableProps } from './types';
 
-export function PeriodicTable() {
+export function PeriodicTable({ 
+  darkMode = false, 
+  showSpectrum = true, 
+  showBohrModel = true 
+}: PeriodicTableProps) {
   const [selectedElement, setSelectedElement] = useState<ElementData | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<ElementCategory | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(darkMode);
   const [isMobile, setIsMobile] = useState(false);
 
   // Filter elements based on search query
@@ -41,7 +45,7 @@ export function PeriodicTable() {
       const hasDarkClass = root.classList.contains('dark');
       const attrValue = root.getAttribute('darkmode') || root.getAttribute('darkMode');
       const hasDarkAttr = attrValue === 'true';
-      const shouldBeDark = hasDarkClass || hasDarkAttr;
+      const shouldBeDark = darkMode || hasDarkClass || hasDarkAttr;
       
       setIsDarkMode(shouldBeDark);
       
@@ -57,7 +61,7 @@ export function PeriodicTable() {
     
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [darkMode]);
 
   const categories: { name: string; type: ElementCategory; color: string }[] = [
     { name: 'Alkali', type: 'alkali metal', color: 'bg-red-100 dark:bg-red-500/40' },
@@ -110,7 +114,7 @@ export function PeriodicTable() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`grid ${isMobile ? 'grid-cols-9' : 'grid-cols-18'} gap-1 overflow-x-auto pb-8 min-w-[700px] md:min-w-[900px] lg:min-w-0`}
+          className={`grid ${isMobile ? 'grid-cols-9' : 'grid-cols-18'} gap-1 pb-8 min-w-[700px] md:min-w-[900px] lg:min-w-0`}
           role="grid"
           aria-label="Periodic table of elements"
         >
@@ -187,6 +191,8 @@ export function PeriodicTable() {
         element={selectedElement}
         onClose={() => setSelectedElement(null)}
         isDarkMode={isDarkMode}
+        showSpectrum={showSpectrum}
+        showBohrModel={showBohrModel}
       />
       
     </section>

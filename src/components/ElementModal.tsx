@@ -10,7 +10,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 export const ElementModal = ({ 
   element, 
   onClose, 
-  isDarkMode
+  isDarkMode,
+  showSpectrum = true,
+  showBohrModel = true
 }: ElementModalProps) => {
   const [isEntered, setIsEntered] = useState(false);
 
@@ -61,52 +63,54 @@ export const ElementModal = ({
             </button>
 
             {/* 3D Scene */}
-            <div 
-              className="w-full md:w-1/2 h-[300px] md:h-[500px] bg-slate-900 dark:bg-black relative overflow-hidden flex items-center justify-center"
-              role="img"
-              aria-label={`3D Bohr model for ${element.name}`}
-            >
-                {isEntered ? (
-                  <Canvas 
-                    key={element.number}
-                    camera={{ position: [0, 5, 20], fov: 45 }}
-                    gl={{ 
-                      antialias: true, 
-                      alpha: false, 
-                      preserveDrawingBuffer: true,
-                      powerPreference: "high-performance"
-                    }}
-                    style={{ width: '100%', height: '100%' }}
-                    frameloop="always"
-                    dpr={[1, 2]}
-                  >
-                    <color attach="background" args={['#0f172a']} />
-                    <ambientLight intensity={1.8} />
-                    <pointLight position={[10, 10, 10]} intensity={2.5} />
-                    <pointLight position={[-10, -10, -10]} intensity={1.5} color="#3b82f6" />
-                    <spotLight position={[0, 20, 0]} intensity={1} angle={0.3} penumbra={1} />
-                    <OrbitControls 
-                      enablePan={false} 
-                      minDistance={5} 
-                      maxDistance={40}
-                    />
-                    <Suspense fallback={null}>
-                      <BohrModel shells={element.shells || []} symbol={element.symbol} />
-                    </Suspense>
-                  </Canvas>
-                ) : (
-                  <div className="flex flex-col items-center gap-3 text-slate-500">
-                    <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-                    <span className="text-[10px] font-medium uppercase tracking-wider">Initializing 3D Scene...</span>
+            {showBohrModel && (
+              <div 
+                className="w-full md:w-1/2 h-[300px] md:h-[500px] bg-slate-900 dark:bg-black relative overflow-hidden flex items-center justify-center"
+                role="img"
+                aria-label={`3D Bohr model for ${element.name}`}
+              >
+                  {isEntered ? (
+                    <Canvas 
+                      key={element.number}
+                      camera={{ position: [0, 5, 20], fov: 45 }}
+                      gl={{ 
+                        antialias: true, 
+                        alpha: false, 
+                        preserveDrawingBuffer: true,
+                        powerPreference: "high-performance"
+                      }}
+                      style={{ width: '100%', height: '100%' }}
+                      frameloop="always"
+                      dpr={[1, 2]}
+                    >
+                      <color attach="background" args={['#0f172a']} />
+                      <ambientLight intensity={1.8} />
+                      <pointLight position={[10, 10, 10]} intensity={2.5} />
+                      <pointLight position={[-10, -10, -10]} intensity={1.5} color="#3b82f6" />
+                      <spotLight position={[0, 20, 0]} intensity={1} angle={0.3} penumbra={1} />
+                      <OrbitControls 
+                        enablePan={false} 
+                        minDistance={5} 
+                        maxDistance={40}
+                      />
+                      <Suspense fallback={null}>
+                        <BohrModel shells={element.shells || []} symbol={element.symbol} />
+                      </Suspense>
+                    </Canvas>
+                  ) : (
+                    <div className="flex flex-col items-center gap-3 text-slate-500">
+                      <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                      <span className="text-[10px] font-medium uppercase tracking-wider">Initializing 3D Scene...</span>
+                    </div>
+                  )}
+                  <div className="absolute bottom-4 left-4 text-white/50 text-[10px] pointer-events-none uppercase tracking-widest font-bold">
+                    Interactive 3D Bohr Model
                   </div>
-                )}
-                <div className="absolute bottom-4 left-4 text-white/50 text-[10px] pointer-events-none uppercase tracking-widest font-bold">
-                  Interactive 3D Bohr Model
                 </div>
-              </div>
+            )}
 
             {/* Metadata */}
-            <div className="w-full md:w-1/2 flex-1 p-6 md:p-8 overflow-y-auto">
+            <div className={`w-full ${showBohrModel ? 'md:w-1/2' : 'md:w-full'} flex-1 p-6 md:p-8 overflow-y-auto`}>
               <div className="flex items-baseline gap-2 mb-1 md:mb-2">
                 <h2 className="text-2xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
                   {element.symbol}
@@ -153,7 +157,7 @@ export const ElementModal = ({
                 </div>
               </div>
 
-              {element.strongLines && element.strongLines.length > 0 && (
+              {showSpectrum && element.strongLines && element.strongLines.length > 0 && (
                 <Spectrum lines={element.strongLines} />
               )}
 

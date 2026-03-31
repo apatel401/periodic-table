@@ -1,6 +1,6 @@
 {
   "name": "@stem_dev/periodic-table",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "type": "module",
   "main": "./dist/index.cjs.js",
@@ -25,7 +25,8 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build",
-    "build:umd": "vite build --config vite.umd.config.ts"
+    "build:umd": "vite build --config vite.umd.config.ts",
+    "build:demo": "vite build --config vite.demo.config.ts"
   },
   "dependencies": {
   },
