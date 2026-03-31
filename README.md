@@ -4,7 +4,7 @@ A modern, interactive periodic table library for React and standalone web applic
 
 [**🚀 Live Demo**](https://stem-dev-periodic-table.netlify.app)
 
-![Periodic Table Preview](/light.png/)
+![Periodic Table Preview](https://raw.githubusercontent.com/apatel401/periodic-table/refs/heads/master/light.png)
 
 ## Features
 
@@ -23,12 +23,12 @@ A modern, interactive periodic table library for React and standalone web applic
 ### Light & Dark Modes
 | Light Mode | Dark Mode |
 | :---: | :---: |
-| ![Light Mode](/light.png) | ![Dark Mode](/dark.png) |
+| ![Light Mode](https://raw.githubusercontent.com/apatel401/periodic-table/refs/heads/master/light.png) | ![Dark Mode](https://raw.githubusercontent.com/apatel401/periodic-table/refs/heads/master/dark.png) |
 
 ### Interactive Features
 | 3D Bohr Model | Emission Spectrum |
 | :---: | :---: |
-| ![Bohr Model](/bohr-model.png) | ![Emission Spectrum](/spectra.png) |
+| ![Bohr Model](https://raw.githubusercontent.com/apatel401/periodic-table/refs/heads/master/bohr-model.png) | ![Emission Spectrum](https://raw.githubusercontent.com/apatel401/periodic-table/refs/heads/master/spectra.png) |
 
 ## Installation
 
